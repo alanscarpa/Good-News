@@ -1,0 +1,13 @@
+PODS:
+  - HTMLReader (0.8)
+  - Ono (1.2.2)
+
+DEPENDENCIES:
+  - HTMLReader
+  - Ono
+
+SPEC CHECKSUMS:
+  HTMLReader: b4d19899a242c02e1ce4a2308584fe2a6bcb6f6b
+  Ono: 80b1c686777d3f6d5d5ce6fcac8a74afef4ca197
+
+COCOAPODS: 0.37.2
