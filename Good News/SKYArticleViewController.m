@@ -33,7 +33,10 @@
 }
 
 - (void)prepareWebView {
-    self.article.urlString = [self.article.urlString stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLHostAllowedCharacterSet]];
+    if (!self.article.isUrlEscaped) {
+        self.article.urlString = [self.article.urlString stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLHostAllowedCharacterSet]];
+        self.article.isUrlEscaped = YES;
+    }
     
     NSString *escapedURL = [@"http://readability.com/api/content/v1/parser?token=781e1dfed669b731e19f697ad977c3b8a0304d9c&url=" stringByAppendingString:self.article.urlString];
     
@@ -44,6 +47,9 @@
     [request setHTTPMethod: @"GET"];
     
     [NSURLConnection sendAsynchronousRequest:request queue:[[NSOperationQueue alloc] init] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        
+        
+        
         
         if (data){
             NSDictionary *jsonArray = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
