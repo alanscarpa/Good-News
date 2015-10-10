@@ -11,13 +11,14 @@
 #import "SKYNetworkHandler.h"
 #import "SKYNewsFeedTableViewCell+Customization.h"
 #import "SKYArticleViewController.h"
+#import <UIScrollView+InfiniteScroll.h>
 
 NSString *const kArticleSourceUrlString = @"https://www.reddit.com/r/UpliftingNews";
 
 @interface SKYNewsFeedTableViewController ()
 
 @property (nonatomic, strong) NSMutableArray *articles;
-
+@property (nonatomic, strong) NSMutableArray *backAndNextButtonURLStrings;
 @end
 
 @implementation SKYNewsFeedTableViewController
@@ -25,18 +26,21 @@ NSString *const kArticleSourceUrlString = @"https://www.reddit.com/r/UpliftingNe
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self prepareDataSource];
-    [self loadArticles];
+    [self loadArticlesFromSourc:kArticleSourceUrlString];
+    [self setUpInfiniteScroller];
     [self setUpUI];
 }
 
 - (void)prepareDataSource {
     self.articles = [[NSMutableArray alloc] init];
+    self.backAndNextButtonURLStrings = [[NSMutableArray alloc] init];
 }
 
-- (void)loadArticles {
-    [SKYNetworkHandler getNewestArticlesForArticleList:self.articles FromSource:kArticleSourceUrlString withCompletionHandler:^(NSMutableArray *articles, NSError *error) {
+- (void)loadArticlesFromSourc:(NSString *)urlString {
+    [SKYNetworkHandler getNewestArticlesForArticleList:self.articles FromSource:urlString withCompletionHandler:^(NSMutableArray *articles, NSMutableArray *backAndNextButtonURLStrings, NSError *error) {
         if (!error){
-            [self updateDataSourceWithArticles:articles];
+            [self updateDataSourceWithArticles:articles
+                      andBackAndNextURLStrings:backAndNextButtonURLStrings];
             [self.tableView reloadData];
         } else {
             NSLog(@"Error getting latest articlets: %@", error);
@@ -44,8 +48,22 @@ NSString *const kArticleSourceUrlString = @"https://www.reddit.com/r/UpliftingNe
     }];
 }
 
-- (void)updateDataSourceWithArticles:(NSMutableArray *)articles {
+- (void)updateDataSourceWithArticles:(NSMutableArray *)articles
+            andBackAndNextURLStrings:(NSMutableArray *)backAndNextURLStrings {
     self.articles = articles;
+    self.backAndNextButtonURLStrings = backAndNextURLStrings;
+}
+
+- (void)setUpInfiniteScroller {
+    self.tableView.infiniteScrollIndicatorStyle = UIActivityIndicatorViewStyleWhite;
+    
+    __weak typeof(self) weakSelf = self;
+
+    [self.tableView addInfiniteScrollWithHandler:^(UITableView* tableView) {
+        [weakSelf loadArticlesFromSourc:weakSelf.backAndNextButtonURLStrings[1]];
+        [tableView reloadData];
+        [tableView finishInfiniteScroll];
+    }];
 }
 
 - (void)setUpUI {
@@ -72,13 +90,10 @@ NSString *const kArticleSourceUrlString = @"https://www.reddit.com/r/UpliftingNe
 
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     SKYArticleViewController *destinationVC = [segue destinationViewController];
     NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
     destinationVC.article = self.articles[indexPath.row];
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
 }
 
 @end

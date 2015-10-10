@@ -10,6 +10,10 @@
 
 @interface SKYArticleTransformer : NSObject
 
-+ (NSMutableArray *)updateArticles:(NSMutableArray *)articles withArticlesFromData:(NSData *)data andResponse:(NSURLResponse *)response;
++ (NSMutableArray *)updateArticles:(NSMutableArray *)articles
+              withArticlesFromData:(NSData *)data
+                       andResponse:(NSURLResponse *)response;
++ (NSMutableArray *)backAndNextButtonURLStringsFromData:(NSData *)data
+                                            andResponse:(NSURLResponse *)response;
 
 @end

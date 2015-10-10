@@ -14,18 +14,21 @@
 
 + (void)getNewestArticlesForArticleList:(NSMutableArray *)articles
                              FromSource:(NSString *)urlString
-                  withCompletionHandler:(void (^)(NSMutableArray *articles, NSError *error))completionHandler {
+                  withCompletionHandler:(void (^)(NSMutableArray *articles, NSMutableArray *backAndNextButtonURLStrings, NSError *error))completionHandler {
 
     NSURL *URL = [NSURL URLWithString:urlString];
     NSURLSessionTask *task = [[NSURLSession sharedSession] dataTaskWithURL:URL completionHandler:
                               ^(NSData *data, NSURLResponse *response, NSError *error) {
                                   if (!error){
                                       [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-                                          completionHandler([SKYArticleTransformer updateArticles:articles withArticlesFromData:data andResponse:response], nil);
+                                          completionHandler([SKYArticleTransformer
+                                                             updateArticles:articles
+                                                             withArticlesFromData:data
+                                                             andResponse:response], [SKYArticleTransformer backAndNextButtonURLStringsFromData:data andResponse:response], nil);
                                       }];
                                   } else {
                                       [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-                                          completionHandler(nil, error);
+                                          completionHandler(nil, nil, error);
                                       }];
                                   }
                               }];

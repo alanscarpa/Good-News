@@ -18,8 +18,7 @@
                              placeholderImage:nil
                                     completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
                                         if (error) {
-                                            NSLog(@"Error loading image: %@", error);
-                                            self.articleImageView.image = [UIImage imageNamed:@"corgi"];
+                                            self.articleImageView.image = [UIImage imageNamed:@"sunrise"];
                                         }
                                     }];
 }

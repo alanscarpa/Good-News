@@ -13,33 +13,8 @@
 @implementation SKYArticleTransformer
 
 + (NSMutableArray *)updateArticles:(NSMutableArray *)articles withArticlesFromData:(NSData *)data andResponse:(NSURLResponse *)response {
-    
     NSMutableArray *downloadedArticles = [[NSMutableArray alloc] initWithArray:[self articlesFromData:data andResponse:response]];
-    
-    
     return [self updateExistingArticles:articles withNewArticles:downloadedArticles];
-//    HTMLElement *navBtns = [home firstNodeMatchingSelector:@".nextprev"];
-
-//    HTMLElement *navBtn = navBtns.children[1];
-//    if ([navBtn.attributes[@"rel"] isEqualToString:@"nofollow prev"]){
-//        NSLog(@"We have a previous button & next button");
-//        HTMLElement *backBtn = navBtns.children[1];
-//        NSLog(@"%@", backBtn.attributes[@"href"]);
-//        [self.backAndNextURLs replaceObjectAtIndex:0 withObject:backBtn.attributes[@"href"]];
-//        
-//        HTMLElement *nextBtn = navBtns.children[3];
-//        NSLog(@"%@", nextBtn.attributes[@"href"]);
-//        [self.backAndNextURLs replaceObjectAtIndex:1 withObject:nextBtn.attributes[@"href"]];
-//        
-//    } else {
-//        NSLog(@"We only have a next button");
-//        HTMLElement *nextBtn = navBtns.children[1];
-//        NSLog(@"%@", nextBtn.attributes[@"href"]);
-//        [self.backAndNextURLs replaceObjectAtIndex:1 withObject:nextBtn.attributes[@"href"]];
-//    }
-//    
-//    NSLog(@"\nImages: %li\nArticles: %li", (unsigned long)self.imageURLs.count, (unsigned long)self.articleTitles.count);
-//    NSLog(@"Back and Next button: %@", self.backAndNextURLs);
 }
 
 + (NSMutableArray *)articlesFromData:(NSData *)data andResponse:(NSURLResponse *)response {
@@ -51,6 +26,27 @@
             }
         }
     return articles;
+}
+
++ (NSMutableArray *)backAndNextButtonURLStringsFromData:(NSData *)data andResponse:(NSURLResponse *)response {
+    NSMutableArray *backAndNextButtonURLString = [[NSMutableArray alloc] initWithArray:@[[NSNull null], [NSNull null]]];
+    HTMLDocument *home = [self htmlDocumentFromData:data andResponse:response];
+    HTMLElement *navBtns = [home firstNodeMatchingSelector:@".nextprev"];
+    HTMLElement *navBtn = navBtns.children[1];
+    if ([navBtn.attributes[@"rel"] isEqualToString:@"nofollow prev"]){
+        NSLog(@"We have a previous button & next button");
+        HTMLElement *backBtn = navBtns.children[1];
+        [backAndNextButtonURLString replaceObjectAtIndex:0 withObject:backBtn.attributes[@"href"]];
+        
+        HTMLElement *nextBtn = navBtns.children[3];
+        [backAndNextButtonURLString replaceObjectAtIndex:1 withObject:nextBtn.attributes[@"href"]];
+        
+    } else {
+        NSLog(@"We only have a next button");
+        HTMLElement *nextBtn = navBtns.children[1];
+        [backAndNextButtonURLString replaceObjectAtIndex:1 withObject:nextBtn.attributes[@"href"]];
+    }
+    return backAndNextButtonURLString;
 }
 
 + (HTMLDocument *)htmlDocumentFromData:(NSData *)data andResponse:(NSURLResponse *)response {
@@ -74,16 +70,16 @@
 + (SKYArticle *)articleFromElement:(HTMLElement *)element {
     SKYArticle *article = [[SKYArticle alloc] init];
     HTMLElement *titleElement = [element.children[4] firstNodeMatchingSelector:@".title.may-blank"];
-    NSLog(@"%@", titleElement.textContent);
-    NSLog(@"%@", element.children[3][@"href"]);
+    //NSLog(@"%@", titleElement.textContent);
+    //NSLog(@"%@", element.children[3][@"href"]);
     HTMLElement *imageElement = element.children[3];
     if (imageElement.children.count > 0){
         NSString *rawURL = imageElement.children[0][@"src"];
         NSString *imageURL = [rawURL stringByReplacingCharactersInRange:NSMakeRange(0, 2) withString:@"http://"];
-        NSLog(@"%@", imageURL);
+        //NSLog(@"%@", imageURL);
         article.imageUrlString = imageURL;
     } else {
-        NSLog(@"--- BLANK PHOTO ---");
+        //NSLog(@"--- BLANK PHOTO ---");
         article.imageUrlString = nil;
     }
     article.title = titleElement.textContent;
@@ -92,16 +88,25 @@
 }
 
 + (NSMutableArray *)updateExistingArticles:(NSMutableArray *)existingArticles withNewArticles:(NSMutableArray *)newArticles {
+    NSLog(@"Existing: %@", existingArticles);
+    NSLog(@" -----------------------------------------------");
+    NSLog(@"New: %@", newArticles);
+    
+    NSMutableArray *someArray = [[NSMutableArray alloc] init];
     if (existingArticles.count > 0) {
         for (SKYArticle *newArticle in newArticles){
+            BOOL articleExists = NO;
             for (SKYArticle *existingArticle in existingArticles) {
                 if ([newArticle.urlString isEqualToString:existingArticle.urlString]){
-                    NSLog(@"Already have article.");
-                } else {
-                    [existingArticles addObject:newArticle];
+                    articleExists = YES;
+                    break;
                 }
             }
+            if (!articleExists) {
+                [someArray addObject:newArticle];
+            }
         }
+        [existingArticles addObjectsFromArray:someArray];
         return existingArticles;
     } else {
         return newArticles;

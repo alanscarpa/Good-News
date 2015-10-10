@@ -47,10 +47,7 @@
     [request setHTTPMethod: @"GET"];
     
     [NSURLConnection sendAsynchronousRequest:request queue:[[NSOperationQueue alloc] init] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-        
-        
-        
-        
+
         if (data){
             NSDictionary *jsonArray = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
             
@@ -62,18 +59,13 @@
             
             [self.webView loadHTMLString:html baseURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] bundlePath]]];
         } else {
-            // Show Alert Somehow
-            NSLog(@"Error sending to DiffBot");
+            NSLog(@"Error calling Readability");
             NSLog(@"%@", response);
             NSLog(@"%@", connectionError);
         }
-        
-        
-        
-        
     }];
-    [self.webView loadHTMLString:@"There was a baby!  It was drowning, but before it gasped it's last sweet breath, a magnificent corgi named Yogi fearlessly dove into the ocean and pulled the baby out by it's diaper.\n\nThere was a baby!  It was drowning, but before it gasped it's last sweet breath, a magnificent corgi named Yogi fearlessly dove into the ocean and pulled the baby out by it's diaper.\n\nThere was a baby!  It was drowning, but before it gasped it's last sweet breath, a magnificent corgi named Yogi fearlessly dove into the ocean and pulled the baby out by it's diaper.\n\nThere was a baby!  It was drowning, but before it gasped it's last sweet breath, a magnificent corgi named Yogi fearlessly dove into the ocean and pulled the baby out by it's diaper.\n\nThere was a baby!  It was drowning, but before it gasped it's last sweet breath, a magnificent corgi named Yogi fearlessly dove into the ocean and pulled the baby out by it's diaper.\n\nThere was a baby!  It was drowning, but before it gasped it's last sweet breath, a magnificent corgi named Yogi fearlessly dove into the ocean and pulled the baby out by it's diaper.\n\nThere was a baby!  It was drowning, but before it gasped it's last sweet breath, a magnificent corgi named Yogi fearlessly dove into the ocean and pulled the baby out by it's diaper.\n\nThere was a baby!  It was drowning, but before it gasped it's last sweet breath, a magnificent corgi named Yogi fearlessly dove into the ocean and pulled the baby out by it's diaper.\n\n" baseURL:nil];
 }
+
 - (IBAction)backButtonTapped:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }
