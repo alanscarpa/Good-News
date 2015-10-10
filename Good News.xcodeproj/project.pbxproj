@@ -12,20 +12,17 @@
 		454C51B01B5C126F00D6680A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 454C51AF1B5C126F00D6680A /* AppDelegate.m */; };
 		454C51B31B5C126F00D6680A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 454C51B21B5C126F00D6680A /* ViewController.m */; };
 		454C51B61B5C126F00D6680A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 454C51B41B5C126F00D6680A /* Main.storyboard */; };
-		454C51B81B5C126F00D6680A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 454C51B71B5C126F00D6680A /* Images.xcassets */; };
-		454C51BB1B5C126F00D6680A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 454C51B91B5C126F00D6680A /* LaunchScreen.xib */; };
-		454C51C71B5C126F00D6680A /* Good_NewsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 454C51C61B5C126F00D6680A /* Good_NewsTests.m */; };
+		455FD8201BC8AEBD000E449F /* SKYNewsFeedTableViewCell+Customization.m in Sources */ = {isa = PBXBuildFile; fileRef = 455FD81F1BC8AEBD000E449F /* SKYNewsFeedTableViewCell+Customization.m */; settings = {ASSET_TAGS = (); }; };
+		45A66A2D1BC53E1B00E0D5FA /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45A66A2C1BC53E1B00E0D5FA /* images.xcassets */; settings = {ASSET_TAGS = (); }; };
+		45A66A301BC549E600E0D5FA /* ostrich-sans-inline-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 45A66A2E1BC549E600E0D5FA /* ostrich-sans-inline-regular.ttf */; settings = {ASSET_TAGS = (); }; };
+		45A66A311BC549E600E0D5FA /* PlantagenetCherokee.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 45A66A2F1BC549E600E0D5FA /* PlantagenetCherokee.ttf */; settings = {ASSET_TAGS = (); }; };
+		45A66A361BC68C0600E0D5FA /* SKYNetworkHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 45A66A351BC68C0600E0D5FA /* SKYNetworkHandler.m */; settings = {ASSET_TAGS = (); }; };
+		45A66A3A1BC68CB800E0D5FA /* SKYArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = 45A66A391BC68CB800E0D5FA /* SKYArticle.m */; settings = {ASSET_TAGS = (); }; };
+		45A66A3E1BC693C900E0D5FA /* SKYArticleTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 45A66A3D1BC693C900E0D5FA /* SKYArticleTransformer.m */; settings = {ASSET_TAGS = (); }; };
+		45E0663E1BC3EFEB00BB9723 /* SKYNewsFeedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45E0663D1BC3EFEB00BB9723 /* SKYNewsFeedTableViewController.m */; settings = {ASSET_TAGS = (); }; };
+		45E066421BC3F02700BB9723 /* SKYNewsFeedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 45E066411BC3F02700BB9723 /* SKYNewsFeedTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		45E066461BC4866800BB9723 /* SKYArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45E066451BC4866800BB9723 /* SKYArticleViewController.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		454C51C11B5C126F00D6680A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 454C519F1B5C126F00D6680A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 454C51A61B5C126F00D6680A;
-			remoteInfo = "Good News";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		00BC2858F2260B3F72F372C5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -38,11 +35,25 @@
 		454C51B11B5C126F00D6680A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		454C51B21B5C126F00D6680A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		454C51B51B5C126F00D6680A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		454C51B71B5C126F00D6680A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		454C51BA1B5C126F00D6680A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		454C51C01B5C126F00D6680A /* Good NewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Good NewsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		454C51C51B5C126F00D6680A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		454C51C61B5C126F00D6680A /* Good_NewsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Good_NewsTests.m; sourceTree = "<group>"; };
+		455FD81E1BC8AEBD000E449F /* SKYNewsFeedTableViewCell+Customization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKYNewsFeedTableViewCell+Customization.h"; sourceTree = "<group>"; };
+		455FD81F1BC8AEBD000E449F /* SKYNewsFeedTableViewCell+Customization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKYNewsFeedTableViewCell+Customization.m"; sourceTree = "<group>"; };
+		45A66A2C1BC53E1B00E0D5FA /* images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = images.xcassets; sourceTree = "<group>"; };
+		45A66A2E1BC549E600E0D5FA /* ostrich-sans-inline-regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ostrich-sans-inline-regular.ttf"; sourceTree = "<group>"; };
+		45A66A2F1BC549E600E0D5FA /* PlantagenetCherokee.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PlantagenetCherokee.ttf; sourceTree = "<group>"; };
+		45A66A341BC68C0600E0D5FA /* SKYNetworkHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKYNetworkHandler.h; sourceTree = "<group>"; };
+		45A66A351BC68C0600E0D5FA /* SKYNetworkHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKYNetworkHandler.m; sourceTree = "<group>"; };
+		45A66A381BC68CB800E0D5FA /* SKYArticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKYArticle.h; sourceTree = "<group>"; };
+		45A66A391BC68CB800E0D5FA /* SKYArticle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKYArticle.m; sourceTree = "<group>"; };
+		45A66A3C1BC693C900E0D5FA /* SKYArticleTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKYArticleTransformer.h; sourceTree = "<group>"; };
+		45A66A3D1BC693C900E0D5FA /* SKYArticleTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKYArticleTransformer.m; sourceTree = "<group>"; };
+		45E0663C1BC3EFEB00BB9723 /* SKYNewsFeedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKYNewsFeedTableViewController.h; sourceTree = "<group>"; };
+		45E0663D1BC3EFEB00BB9723 /* SKYNewsFeedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKYNewsFeedTableViewController.m; sourceTree = "<group>"; };
+		45E066401BC3F02700BB9723 /* SKYNewsFeedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKYNewsFeedTableViewCell.h; sourceTree = "<group>"; };
+		45E066411BC3F02700BB9723 /* SKYNewsFeedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKYNewsFeedTableViewCell.m; sourceTree = "<group>"; };
+		45E066441BC4866800BB9723 /* SKYArticleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKYArticleViewController.h; sourceTree = "<group>"; };
+		45E066451BC4866800BB9723 /* SKYArticleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKYArticleViewController.m; sourceTree = "<group>"; };
 		7B4F970162EA018350AFDF7E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -52,13 +63,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				03804F1A430A7A62C5C17CC9 /* libPods.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		454C51BD1B5C126F00D6680A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,7 +84,6 @@
 			isa = PBXGroup;
 			children = (
 				454C51A71B5C126F00D6680A /* Good News.app */,
-				454C51C01B5C126F00D6680A /* Good NewsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -88,14 +91,16 @@
 		454C51A91B5C126F00D6680A /* Good News */ = {
 			isa = PBXGroup;
 			children = (
-				454C51AE1B5C126F00D6680A /* AppDelegate.h */,
-				454C51AF1B5C126F00D6680A /* AppDelegate.m */,
+				45A66A3F1BC75C3D00E0D5FA /* Categories */,
+				45A66A371BC68CAD00E0D5FA /* Model */,
+				45A66A321BC68BD000E0D5FA /* Networking */,
 				454C51B11B5C126F00D6680A /* ViewController.h */,
 				454C51B21B5C126F00D6680A /* ViewController.m */,
+				45E066431BC4864B00BB9723 /* Article */,
+				45E0663F1BC3EFFE00BB9723 /* News Feed */,
 				454C51B41B5C126F00D6680A /* Main.storyboard */,
-				454C51B71B5C126F00D6680A /* Images.xcassets */,
-				454C51B91B5C126F00D6680A /* LaunchScreen.xib */,
 				454C51AA1B5C126F00D6680A /* Supporting Files */,
+				45A66A2C1BC53E1B00E0D5FA /* images.xcassets */,
 			);
 			path = "Good News";
 			sourceTree = "<group>";
@@ -103,8 +108,11 @@
 		454C51AA1B5C126F00D6680A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				45A66A331BC68BE300E0D5FA /* Fonts */,
 				454C51AB1B5C126F00D6680A /* Info.plist */,
 				454C51AC1B5C126F00D6680A /* main.m */,
+				454C51AE1B5C126F00D6680A /* AppDelegate.h */,
+				454C51AF1B5C126F00D6680A /* AppDelegate.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -124,6 +132,72 @@
 				454C51C51B5C126F00D6680A /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		45A66A321BC68BD000E0D5FA /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				45A66A341BC68C0600E0D5FA /* SKYNetworkHandler.h */,
+				45A66A351BC68C0600E0D5FA /* SKYNetworkHandler.m */,
+				45A66A3B1BC693BB00E0D5FA /* Transformers */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		45A66A331BC68BE300E0D5FA /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				45A66A2E1BC549E600E0D5FA /* ostrich-sans-inline-regular.ttf */,
+				45A66A2F1BC549E600E0D5FA /* PlantagenetCherokee.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		45A66A371BC68CAD00E0D5FA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				45A66A381BC68CB800E0D5FA /* SKYArticle.h */,
+				45A66A391BC68CB800E0D5FA /* SKYArticle.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		45A66A3B1BC693BB00E0D5FA /* Transformers */ = {
+			isa = PBXGroup;
+			children = (
+				45A66A3C1BC693C900E0D5FA /* SKYArticleTransformer.h */,
+				45A66A3D1BC693C900E0D5FA /* SKYArticleTransformer.m */,
+			);
+			name = Transformers;
+			sourceTree = "<group>";
+		};
+		45A66A3F1BC75C3D00E0D5FA /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		45E0663F1BC3EFFE00BB9723 /* News Feed */ = {
+			isa = PBXGroup;
+			children = (
+				45E0663C1BC3EFEB00BB9723 /* SKYNewsFeedTableViewController.h */,
+				45E0663D1BC3EFEB00BB9723 /* SKYNewsFeedTableViewController.m */,
+				45E066401BC3F02700BB9723 /* SKYNewsFeedTableViewCell.h */,
+				45E066411BC3F02700BB9723 /* SKYNewsFeedTableViewCell.m */,
+				455FD81E1BC8AEBD000E449F /* SKYNewsFeedTableViewCell+Customization.h */,
+				455FD81F1BC8AEBD000E449F /* SKYNewsFeedTableViewCell+Customization.m */,
+			);
+			name = "News Feed";
+			sourceTree = "<group>";
+		};
+		45E066431BC4864B00BB9723 /* Article */ = {
+			isa = PBXGroup;
+			children = (
+				45E066441BC4866800BB9723 /* SKYArticleViewController.h */,
+				45E066451BC4866800BB9723 /* SKYArticleViewController.m */,
+			);
+			name = Article;
 			sourceTree = "<group>";
 		};
 		C37C9AD89C022F1520E6373A /* Pods */ = {
@@ -165,39 +239,17 @@
 			productReference = 454C51A71B5C126F00D6680A /* Good News.app */;
 			productType = "com.apple.product-type.application";
 		};
-		454C51BF1B5C126F00D6680A /* Good NewsTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 454C51CD1B5C126F00D6680A /* Build configuration list for PBXNativeTarget "Good NewsTests" */;
-			buildPhases = (
-				454C51BC1B5C126F00D6680A /* Sources */,
-				454C51BD1B5C126F00D6680A /* Frameworks */,
-				454C51BE1B5C126F00D6680A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				454C51C21B5C126F00D6680A /* PBXTargetDependency */,
-			);
-			name = "Good NewsTests";
-			productName = "Good NewsTests";
-			productReference = 454C51C01B5C126F00D6680A /* Good NewsTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		454C519F1B5C126F00D6680A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Skytop Designs";
 				TargetAttributes = {
 					454C51A61B5C126F00D6680A = {
 						CreatedOnToolsVersion = 6.3.1;
-					};
-					454C51BF1B5C126F00D6680A = {
-						CreatedOnToolsVersion = 6.3.1;
-						TestTargetID = 454C51A61B5C126F00D6680A;
 					};
 				};
 			};
@@ -215,7 +267,6 @@
 			projectRoot = "";
 			targets = (
 				454C51A61B5C126F00D6680A /* Good News */,
-				454C51BF1B5C126F00D6680A /* Good NewsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -225,16 +276,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45A66A311BC549E600E0D5FA /* PlantagenetCherokee.ttf in Resources */,
 				454C51B61B5C126F00D6680A /* Main.storyboard in Resources */,
-				454C51BB1B5C126F00D6680A /* LaunchScreen.xib in Resources */,
-				454C51B81B5C126F00D6680A /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		454C51BE1B5C126F00D6680A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				45A66A2D1BC53E1B00E0D5FA /* images.xcassets in Resources */,
+				45A66A301BC549E600E0D5FA /* ostrich-sans-inline-regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,29 +323,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				455FD8201BC8AEBD000E449F /* SKYNewsFeedTableViewCell+Customization.m in Sources */,
+				45E066421BC3F02700BB9723 /* SKYNewsFeedTableViewCell.m in Sources */,
+				45E0663E1BC3EFEB00BB9723 /* SKYNewsFeedTableViewController.m in Sources */,
+				45A66A3A1BC68CB800E0D5FA /* SKYArticle.m in Sources */,
 				454C51B31B5C126F00D6680A /* ViewController.m in Sources */,
+				45E066461BC4866800BB9723 /* SKYArticleViewController.m in Sources */,
+				45A66A361BC68C0600E0D5FA /* SKYNetworkHandler.m in Sources */,
 				454C51B01B5C126F00D6680A /* AppDelegate.m in Sources */,
 				454C51AD1B5C126F00D6680A /* main.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		454C51BC1B5C126F00D6680A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				454C51C71B5C126F00D6680A /* Good_NewsTests.m in Sources */,
+				45A66A3E1BC693C900E0D5FA /* SKYArticleTransformer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		454C51C21B5C126F00D6680A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 454C51A61B5C126F00D6680A /* Good News */;
-			targetProxy = 454C51C11B5C126F00D6680A /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		454C51B41B5C126F00D6680A /* Main.storyboard */ = {
@@ -309,14 +345,6 @@
 				454C51B51B5C126F00D6680A /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		454C51B91B5C126F00D6680A /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				454C51BA1B5C126F00D6680A /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -343,6 +371,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -407,8 +436,11 @@
 			baseConfigurationReference = 7B4F970162EA018350AFDF7E /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "Good News/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.skytopdesigns.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -418,43 +450,12 @@
 			baseConfigurationReference = 00BC2858F2260B3F72F372C5 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "Good News/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.skytopdesigns.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		454C51CE1B5C126F00D6680A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "Good NewsTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Good News.app/Good News";
-			};
-			name = Debug;
-		};
-		454C51CF1B5C126F00D6680A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "Good NewsTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Good News.app/Good News";
 			};
 			name = Release;
 		};
@@ -475,15 +476,6 @@
 			buildConfigurations = (
 				454C51CB1B5C126F00D6680A /* Debug */,
 				454C51CC1B5C126F00D6680A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		454C51CD1B5C126F00D6680A /* Build configuration list for PBXNativeTarget "Good NewsTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				454C51CE1B5C126F00D6680A /* Debug */,
-				454C51CF1B5C126F00D6680A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
