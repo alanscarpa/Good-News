@@ -14,7 +14,12 @@
 
 + (NSMutableArray *)updateArticles:(NSMutableArray *)articles withArticlesFromData:(NSData *)data andResponse:(NSURLResponse *)response {
     NSMutableArray *downloadedArticles = [[NSMutableArray alloc] initWithArray:[self articlesFromData:data andResponse:response]];
-    return [self updateExistingArticles:articles withNewArticles:downloadedArticles];
+    return [self updateExistingArticles:articles withNextPageArticles:downloadedArticles];
+}
+
++ (NSMutableArray *)addNewestArticlesToExistingArticles:(NSMutableArray *)articles withArticlesFromData:(NSData *)data andResponse:(NSURLResponse *)response {
+    NSMutableArray *downloadedArticles = [[NSMutableArray alloc] initWithArray:[self articlesFromData:data andResponse:response]];
+    return [self addToExistingArticles:articles withNewestArticles:downloadedArticles];
 }
 
 + (NSMutableArray *)articlesFromData:(NSData *)data andResponse:(NSURLResponse *)response {
@@ -22,6 +27,7 @@
     HTMLDocument *home = [self htmlDocumentFromData:data andResponse:response];
         for (HTMLElement *element in [home nodesMatchingSelector:@".thing"]){
             if (![self isElementModPost:element]){
+                
                 [articles addObject:[self articleFromElement:element]];
             }
         }
@@ -84,15 +90,12 @@
     }
     article.title = titleElement.textContent;
     article.urlString = element.children[3][@"href"];
+    
     return article;
 }
 
-+ (NSMutableArray *)updateExistingArticles:(NSMutableArray *)existingArticles withNewArticles:(NSMutableArray *)newArticles {
-    NSLog(@"Existing: %@", existingArticles);
-    NSLog(@" -----------------------------------------------");
-    NSLog(@"New: %@", newArticles);
-    
-    NSMutableArray *someArray = [[NSMutableArray alloc] init];
++ (NSMutableArray *)updateExistingArticles:(NSMutableArray *)existingArticles withNextPageArticles:(NSMutableArray *)newArticles {
+    NSMutableArray *articlesToAdd = [[NSMutableArray alloc] init];
     if (existingArticles.count > 0) {
         for (SKYArticle *newArticle in newArticles){
             BOOL articleExists = NO;
@@ -103,11 +106,33 @@
                 }
             }
             if (!articleExists) {
-                [someArray addObject:newArticle];
+                [articlesToAdd addObject:newArticle];
             }
         }
-        [existingArticles addObjectsFromArray:someArray];
+        [existingArticles addObjectsFromArray:articlesToAdd];
         return existingArticles;
+    } else {
+        return newArticles;
+    }
+}
+
++ (NSMutableArray *)addToExistingArticles:(NSMutableArray *)existingArticles withNewestArticles:(NSMutableArray *)newArticles {
+    NSMutableArray *articlesToAdd = [[NSMutableArray alloc] init];
+    if (existingArticles.count > 0) {
+        for (SKYArticle *newArticle in newArticles){
+            BOOL articleExists = NO;
+            for (SKYArticle *existingArticle in existingArticles) {
+                if ([newArticle.urlString isEqualToString:existingArticle.urlString]){
+                    articleExists = YES;
+                    break;
+                }
+            }
+            if (!articleExists) {
+                [articlesToAdd addObject:newArticle];
+            }
+        }
+        [articlesToAdd addObjectsFromArray:existingArticles];
+        return articlesToAdd;
     } else {
         return newArticles;
     }

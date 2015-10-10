@@ -1,3 +1,15 @@
+body {
+    background: #fff;
+    color: #222;
+    cursor: auto;
+    font-family: "Iowan Old Style";
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1.5;
+    margin: 0;
+    padding: 20px;
+    position: relative; }
+
 img {
     border-color: #ffe7ba;
     border-width: 5px;

@@ -13,6 +13,12 @@
 		454C51B61B5C126F00D6680A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 454C51B41B5C126F00D6680A /* Main.storyboard */; };
 		455FD8201BC8AEBD000E449F /* SKYNewsFeedTableViewCell+Customization.m in Sources */ = {isa = PBXBuildFile; fileRef = 455FD81F1BC8AEBD000E449F /* SKYNewsFeedTableViewCell+Customization.m */; settings = {ASSET_TAGS = (); }; };
 		455FD8311BC8BF78000E449F /* custom.css in Resources */ = {isa = PBXBuildFile; fileRef = 455FD8301BC8BF78000E449F /* custom.css */; settings = {ASSET_TAGS = (); }; };
+		45A1E4AC1BC9B067008D3637 /* foundation.css in Resources */ = {isa = PBXBuildFile; fileRef = 45A1E4A61BC9B067008D3637 /* foundation.css */; settings = {ASSET_TAGS = (); }; };
+		45A1E4AD1BC9B067008D3637 /* foundation.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 45A1E4A71BC9B067008D3637 /* foundation.min.css */; settings = {ASSET_TAGS = (); }; };
+		45A1E4AE1BC9B067008D3637 /* foundation.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 45A1E4A81BC9B067008D3637 /* foundation.min.js */; settings = {ASSET_TAGS = (); }; };
+		45A1E4AF1BC9B067008D3637 /* jquery.js in Resources */ = {isa = PBXBuildFile; fileRef = 45A1E4A91BC9B067008D3637 /* jquery.js */; settings = {ASSET_TAGS = (); }; };
+		45A1E4B01BC9B067008D3637 /* modernizr.js in Resources */ = {isa = PBXBuildFile; fileRef = 45A1E4AA1BC9B067008D3637 /* modernizr.js */; settings = {ASSET_TAGS = (); }; };
+		45A1E4B11BC9B067008D3637 /* normalize.css in Resources */ = {isa = PBXBuildFile; fileRef = 45A1E4AB1BC9B067008D3637 /* normalize.css */; settings = {ASSET_TAGS = (); }; };
 		45A66A2D1BC53E1B00E0D5FA /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45A66A2C1BC53E1B00E0D5FA /* images.xcassets */; settings = {ASSET_TAGS = (); }; };
 		45A66A301BC549E600E0D5FA /* ostrich-sans-inline-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 45A66A2E1BC549E600E0D5FA /* ostrich-sans-inline-regular.ttf */; settings = {ASSET_TAGS = (); }; };
 		45A66A311BC549E600E0D5FA /* PlantagenetCherokee.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 45A66A2F1BC549E600E0D5FA /* PlantagenetCherokee.ttf */; settings = {ASSET_TAGS = (); }; };
@@ -38,6 +44,12 @@
 		455FD81E1BC8AEBD000E449F /* SKYNewsFeedTableViewCell+Customization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKYNewsFeedTableViewCell+Customization.h"; sourceTree = "<group>"; };
 		455FD81F1BC8AEBD000E449F /* SKYNewsFeedTableViewCell+Customization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKYNewsFeedTableViewCell+Customization.m"; sourceTree = "<group>"; };
 		455FD8301BC8BF78000E449F /* custom.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = custom.css; sourceTree = "<group>"; };
+		45A1E4A61BC9B067008D3637 /* foundation.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = foundation.css; sourceTree = "<group>"; };
+		45A1E4A71BC9B067008D3637 /* foundation.min.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = foundation.min.css; sourceTree = "<group>"; };
+		45A1E4A81BC9B067008D3637 /* foundation.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = foundation.min.js; sourceTree = "<group>"; };
+		45A1E4A91BC9B067008D3637 /* jquery.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jquery.js; sourceTree = "<group>"; };
+		45A1E4AA1BC9B067008D3637 /* modernizr.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = modernizr.js; sourceTree = "<group>"; };
+		45A1E4AB1BC9B067008D3637 /* normalize.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = normalize.css; sourceTree = "<group>"; };
 		45A66A2C1BC53E1B00E0D5FA /* images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = images.xcassets; sourceTree = "<group>"; };
 		45A66A2E1BC549E600E0D5FA /* ostrich-sans-inline-regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ostrich-sans-inline-regular.ttf"; sourceTree = "<group>"; };
 		45A66A2F1BC549E600E0D5FA /* PlantagenetCherokee.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PlantagenetCherokee.ttf; sourceTree = "<group>"; };
@@ -134,6 +146,12 @@
 		455FD8211BC8BB97000E449F /* Web Styles */ = {
 			isa = PBXGroup;
 			children = (
+				45A1E4A61BC9B067008D3637 /* foundation.css */,
+				45A1E4A71BC9B067008D3637 /* foundation.min.css */,
+				45A1E4A81BC9B067008D3637 /* foundation.min.js */,
+				45A1E4A91BC9B067008D3637 /* jquery.js */,
+				45A1E4AA1BC9B067008D3637 /* modernizr.js */,
+				45A1E4AB1BC9B067008D3637 /* normalize.css */,
 				455FD8301BC8BF78000E449F /* custom.css */,
 			);
 			name = "Web Styles";
@@ -284,8 +302,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				45A66A311BC549E600E0D5FA /* PlantagenetCherokee.ttf in Resources */,
+				45A1E4AD1BC9B067008D3637 /* foundation.min.css in Resources */,
 				454C51B61B5C126F00D6680A /* Main.storyboard in Resources */,
+				45A1E4B11BC9B067008D3637 /* normalize.css in Resources */,
+				45A1E4AC1BC9B067008D3637 /* foundation.css in Resources */,
 				455FD8311BC8BF78000E449F /* custom.css in Resources */,
+				45A1E4B01BC9B067008D3637 /* modernizr.js in Resources */,
+				45A1E4AE1BC9B067008D3637 /* foundation.min.js in Resources */,
+				45A1E4AF1BC9B067008D3637 /* jquery.js in Resources */,
 				45A66A2D1BC53E1B00E0D5FA /* images.xcassets in Resources */,
 				45A66A301BC549E600E0D5FA /* ostrich-sans-inline-regular.ttf in Resources */,
 			);

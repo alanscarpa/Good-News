@@ -7,9 +7,6 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <customFonts key="customFonts">
-        <mutableArray key="PlantagenetCherokee.ttf">
-            <string>PlantagenetCherokee</string>
-        </mutableArray>
         <mutableArray key="ostrich-sans-inline-regular.ttf">
             <string>OstrichSansInline</string>
             <string>OstrichSansInline</string>
@@ -39,12 +36,12 @@
                                                 <constraint firstAttribute="width" secondItem="3ee-8S-6ZP" secondAttribute="height" multiplier="1:1" id="jiE-EU-IR1"/>
                                             </constraints>
                                         </imageView>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wV0-mV-A6U">
-                                            <rect key="frame" x="95.5" y="57" width="488.5" height="30"/>
+                                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wV0-mV-A6U">
+                                            <rect key="frame" x="95" y="56" width="488.5" height="30.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Corgi Saves Baby From Drowning" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l2V-QA-ODq">
-                                                    <rect key="frame" x="9" y="8" width="471.5" height="14"/>
-                                                    <fontDescription key="fontDescription" name="PlantagenetCherokee" family="Plantagenet Cherokee" pointSize="14"/>
+                                                    <rect key="frame" x="9" y="8" width="471.5" height="18"/>
+                                                    <fontDescription key="fontDescription" name="IowanOldStyle-Bold" family="Iowan Old Style" pointSize="13"/>
                                                     <color key="textColor" red="0.054901960784313725" green="0.054901960784313725" blue="0.054901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -115,9 +112,6 @@
                                 <state key="normal" title="No Ads">
                                     <color key="titleColor" red="0.054901960780000002" green="0.054901960780000002" blue="0.054901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
-                                <connections>
-                                    <action selector="backButtonTapped:" destination="JPo-6C-rbD" eventType="touchUpInside" id="X10-eZ-vgw"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Msm-YR-8WX">
                                 <rect key="frame" x="180" y="555" width="240" height="30"/>

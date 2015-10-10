@@ -53,11 +53,13 @@
             
             NSString *title = [NSString stringWithFormat:@"%@", jsonArray[@"title"]];
 
-            NSMutableString *html = [NSMutableString stringWithFormat:@"<html><meta name=\"viewport\" content=\"width=device-width\"><link rel=\"stylesheet\" type=\"text/css\" href=\"normalize.css\"><link rel=\"stylesheet\" type=\"text/css\" href=\"foundation.css\"><script src=\"modernizr.js\"></script><script src=\"jquery.js\"></script><script src=\"foundation.min.js\"></script><link rel=\"stylesheet\" type=\"text/css\" href=\"custom.css\"><h3>%@</h3>", title];
+            
+            NSMutableString *html = [NSMutableString stringWithFormat:@"<link rel=\"stylesheet\" type=\"text/css\" href=\"custom.css\"><h3>%@</h3>", title];
             
             [html appendFormat:@"%@</html>", jsonArray[@"content"]];
             
             [self.webView loadHTMLString:html baseURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] bundlePath]]];
+
         } else {
             NSLog(@"Error calling Readability");
             NSLog(@"%@", response);

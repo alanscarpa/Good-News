@@ -19,6 +19,8 @@ NSString *const kArticleSourceUrlString = @"https://www.reddit.com/r/UpliftingNe
 
 @property (nonatomic, strong) NSMutableArray *articles;
 @property (nonatomic, strong) NSMutableArray *backAndNextButtonURLStrings;
+@property (nonatomic, strong) UIRefreshControl *pullDownRefreshControl;
+
 @end
 
 @implementation SKYNewsFeedTableViewController
@@ -26,8 +28,9 @@ NSString *const kArticleSourceUrlString = @"https://www.reddit.com/r/UpliftingNe
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self prepareDataSource];
-    [self loadArticlesFromSourc:kArticleSourceUrlString];
+    [self loadNewestArticles];
     [self setUpInfiniteScroller];
+    [self setUpRefreshScroller];
     [self setUpUI];
 }
 
@@ -36,8 +39,21 @@ NSString *const kArticleSourceUrlString = @"https://www.reddit.com/r/UpliftingNe
     self.backAndNextButtonURLStrings = [[NSMutableArray alloc] init];
 }
 
-- (void)loadArticlesFromSourc:(NSString *)urlString {
-    [SKYNetworkHandler getNewestArticlesForArticleList:self.articles FromSource:urlString withCompletionHandler:^(NSMutableArray *articles, NSMutableArray *backAndNextButtonURLStrings, NSError *error) {
+- (void)loadNewestArticles{
+    [SKYNetworkHandler getNewestArticlesForArticleList:self.articles FromSource:kArticleSourceUrlString withCompletionHandler:^(NSMutableArray *articles, NSMutableArray *backAndNextButtonURLStrings, NSError *error) {
+        if (!error){
+            [self updateDataSourceWithArticles:articles
+                      andBackAndNextURLStrings:backAndNextButtonURLStrings];
+            [self.tableView reloadData];
+            [self.pullDownRefreshControl endRefreshing];
+        } else {
+            NSLog(@"Error getting latest articlets: %@", error);
+        }
+    }];
+}
+
+- (void)loadNextPageArticlesFromSource:(NSString *)urlString {
+    [SKYNetworkHandler getNextPageArticlesForArticleList:self.articles FromSource:urlString withCompletionHandler:^(NSMutableArray *articles, NSMutableArray *backAndNextButtonURLStrings, NSError *error) {
         if (!error){
             [self updateDataSourceWithArticles:articles
                       andBackAndNextURLStrings:backAndNextButtonURLStrings];
@@ -55,15 +71,21 @@ NSString *const kArticleSourceUrlString = @"https://www.reddit.com/r/UpliftingNe
 }
 
 - (void)setUpInfiniteScroller {
-    self.tableView.infiniteScrollIndicatorStyle = UIActivityIndicatorViewStyleWhite;
+    self.tableView.infiniteScrollIndicatorStyle = UIActivityIndicatorViewStyleGray;
     
     __weak typeof(self) weakSelf = self;
 
     [self.tableView addInfiniteScrollWithHandler:^(UITableView* tableView) {
-        [weakSelf loadArticlesFromSourc:weakSelf.backAndNextButtonURLStrings[1]];
+        [weakSelf loadNextPageArticlesFromSource:weakSelf.backAndNextButtonURLStrings[1]];
         [tableView reloadData];
         [tableView finishInfiniteScroll];
     }];
+}
+
+- (void)setUpRefreshScroller {
+    self.pullDownRefreshControl = [[UIRefreshControl alloc] init];
+    [self.pullDownRefreshControl addTarget:self action:@selector(loadNewestArticles) forControlEvents:UIControlEventValueChanged];
+    [self.tableView addSubview:self.pullDownRefreshControl];
 }
 
 - (void)setUpUI {
