@@ -37,5 +37,10 @@
 		<string>PlantagenetCherokee.ttf</string>
 		<string>ostrich-sans-inline-regular.ttf</string>
 	</array>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+    </dict>
 </dict>
 </plist>

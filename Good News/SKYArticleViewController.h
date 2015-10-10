@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class SKYArticle;
 
 @interface SKYArticleViewController : UIViewController
+
+@property (nonatomic, strong) SKYArticle *article;
 
 @end

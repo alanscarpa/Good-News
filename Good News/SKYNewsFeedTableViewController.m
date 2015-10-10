@@ -10,6 +10,7 @@
 #import "SKYNewsFeedTableViewCell.h"
 #import "SKYNetworkHandler.h"
 #import "SKYNewsFeedTableViewCell+Customization.h"
+#import "SKYArticleViewController.h"
 
 NSString *const kArticleSourceUrlString = @"https://www.reddit.com/r/UpliftingNews";
 
@@ -73,6 +74,9 @@ NSString *const kArticleSourceUrlString = @"https://www.reddit.com/r/UpliftingNe
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    SKYArticleViewController *destinationVC = [segue destinationViewController];
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    destinationVC.article = self.articles[indexPath.row];
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
