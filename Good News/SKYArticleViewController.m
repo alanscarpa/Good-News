@@ -38,7 +38,7 @@
         self.article.isUrlEscaped = YES;
     }
     
-    NSString *escapedURL = [@"http://readability.com/api/content/v1/parser?token=781e1dfed669b731e19f697ad977c3b8a0304d9c&url=" stringByAppendingString:self.article.urlStringEscaped];
+    NSString *escapedURL = [NSString stringWithFormat:@"http://api.embed.ly/1/extract?key=e96aa82e44c449c694e1e5b23cea1a36&url=%@&maxwidth=500", self.article.urlStringEscaped];
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:escapedURL]
                                                            cachePolicy:NSURLRequestReturnCacheDataElseLoad
@@ -49,19 +49,22 @@
     [NSURLConnection sendAsynchronousRequest:request queue:[[NSOperationQueue alloc] init] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
 
         if (data){
+
             NSDictionary *jsonArray = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
             
             NSString *title = [NSString stringWithFormat:@"%@", jsonArray[@"title"]];
+            NSString *htmlContent = jsonArray[@"content"];
+            if (jsonArray[@"content"] == [NSNull null]) {
+                htmlContent = jsonArray[@"media"][@"html"];
+            }
+            
+            
+            NSMutableString *html = [NSMutableString stringWithFormat:@"<html><style>body{background:#fff;color:#222;cursor:auto;font-family:\"IowanOldStyle\";fontstyle:normal;font-weight:normal;line-height:1.5;margin:0;padding:10px;position:relative;}img{max-width:92%%;margin:0auto;display:table;}iframe{max-width:98%%;}h3{font-family: \"Iowan Old Style\";}</style><h3>%@</h3>%@" , title, htmlContent];
 
+            [self.webView loadHTMLString:html baseURL:[NSURL URLWithString:@"http://blabhlah.com"]];
             
-            NSMutableString *html = [NSMutableString stringWithFormat:@"<link rel=\"stylesheet\" type=\"text/css\" href=\"custom.css\"><h3>%@</h3>", title];
-            
-            [html appendFormat:@"%@</html>", jsonArray[@"content"]];
-            
-            [self.webView loadHTMLString:html baseURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] bundlePath]]];
-
         } else {
-            NSLog(@"Error calling Readability");
+            NSLog(@"Error calling Embedly");
             NSLog(@"%@", response);
             NSLog(@"%@", connectionError);
         }

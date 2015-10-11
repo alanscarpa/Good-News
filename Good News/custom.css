@@ -8,10 +8,20 @@ body {
     line-height: 1.5;
     margin: 0;
     padding: 20px;
-    position: relative; }
+    position: relative;
+}
+
+h3 {
+font-family: "Iowan Old Style";
+}
 
 img {
     max-width:92%%;
     margin:0 auto;
     display: table;
+}
+
+iframe {
+    width:200px;
+    height:600px;
 }
