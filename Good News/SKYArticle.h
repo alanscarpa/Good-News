@@ -12,6 +12,7 @@
 
 @property (strong, nonatomic) NSString *title;
 @property (strong, nonatomic) NSString *urlString;
+@property (strong, nonatomic) NSString *urlStringEscaped;
 @property (strong, nonatomic) NSString *imageUrlString;
 @property (nonatomic) BOOL isUrlEscaped;
 

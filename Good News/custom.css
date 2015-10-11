@@ -11,9 +11,6 @@ body {
     position: relative; }
 
 img {
-    border-color: #ffe7ba;
-    border-width: 5px;
-    border-style: solid;
     max-width:92%%;
     margin:0 auto;
     display: table;

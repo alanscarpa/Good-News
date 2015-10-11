@@ -34,11 +34,11 @@
 
 - (void)prepareWebView {
     if (!self.article.isUrlEscaped) {
-        self.article.urlString = [self.article.urlString stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLHostAllowedCharacterSet]];
+        self.article.urlStringEscaped = [self.article.urlString stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLHostAllowedCharacterSet]];
         self.article.isUrlEscaped = YES;
     }
     
-    NSString *escapedURL = [@"http://readability.com/api/content/v1/parser?token=781e1dfed669b731e19f697ad977c3b8a0304d9c&url=" stringByAppendingString:self.article.urlString];
+    NSString *escapedURL = [@"http://readability.com/api/content/v1/parser?token=781e1dfed669b731e19f697ad977c3b8a0304d9c&url=" stringByAppendingString:self.article.urlStringEscaped];
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:escapedURL]
                                                            cachePolicy:NSURLRequestReturnCacheDataElseLoad
@@ -73,14 +73,11 @@
 }
 
 - (IBAction)shareButtonTapped:(id)sender {
-    NSString *texttoshare = [NSString stringWithFormat:@"Joy to the world  powered by @goodnewsapp"];
+    NSString *texttoshare = [NSString stringWithFormat:@"Here's some good news for a change: %@  via @goodnewsapp", self.article.urlString];
     NSArray *activityItems = @[texttoshare];
     UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
     activityVC.excludedActivityTypes = @[UIActivityTypeAssignToContact, UIActivityTypePrint];
     [self presentViewController:activityVC animated:YES completion:nil];
 }
-
-
-
 
 @end
