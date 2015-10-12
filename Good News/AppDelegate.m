@@ -7,8 +7,13 @@
 //
 
 #import "AppDelegate.h"
+#import <Chartboost/Chartboost.h>
+#import "AppDelegate.h"
+#import <CommonCrypto/CommonDigest.h>
+#import <AdSupport/AdSupport.h>
+#import "SKYConstants.h"
 
-@interface AppDelegate ()
+@interface AppDelegate () <ChartboostDelegate>
 
 @end
 
@@ -17,6 +22,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    // Initialize the Chartboost library
+    [Chartboost startWithAppId:CHARTBOOST_APP_ID
+                  appSignature:CHARTBOOST_APP_KEY
+                      delegate:self];
     return YES;
 }
 

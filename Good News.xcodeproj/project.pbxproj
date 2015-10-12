@@ -8,17 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		03804F1A430A7A62C5C17CC9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03186230C41E9C47BC3C0286 /* libPods.a */; };
+		4530C5AB1BCB251800C0BBF8 /* Chartboost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4530C5AA1BCB251800C0BBF8 /* Chartboost.framework */; settings = {ASSET_TAGS = (); }; };
+		4530C5AF1BCC34A000C0BBF8 /* SKYRemoveAdsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4530C5AE1BCC34A000C0BBF8 /* SKYRemoveAdsViewController.m */; settings = {ASSET_TAGS = (); }; };
 		454C51AD1B5C126F00D6680A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 454C51AC1B5C126F00D6680A /* main.m */; };
 		454C51B01B5C126F00D6680A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 454C51AF1B5C126F00D6680A /* AppDelegate.m */; };
 		454C51B61B5C126F00D6680A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 454C51B41B5C126F00D6680A /* Main.storyboard */; };
 		455FD8201BC8AEBD000E449F /* SKYNewsFeedTableViewCell+Customization.m in Sources */ = {isa = PBXBuildFile; fileRef = 455FD81F1BC8AEBD000E449F /* SKYNewsFeedTableViewCell+Customization.m */; settings = {ASSET_TAGS = (); }; };
-		455FD8311BC8BF78000E449F /* custom.css in Resources */ = {isa = PBXBuildFile; fileRef = 455FD8301BC8BF78000E449F /* custom.css */; settings = {ASSET_TAGS = (); }; };
-		45A1E4AC1BC9B067008D3637 /* foundation.css in Resources */ = {isa = PBXBuildFile; fileRef = 45A1E4A61BC9B067008D3637 /* foundation.css */; settings = {ASSET_TAGS = (); }; };
-		45A1E4AD1BC9B067008D3637 /* foundation.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 45A1E4A71BC9B067008D3637 /* foundation.min.css */; settings = {ASSET_TAGS = (); }; };
-		45A1E4AE1BC9B067008D3637 /* foundation.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 45A1E4A81BC9B067008D3637 /* foundation.min.js */; settings = {ASSET_TAGS = (); }; };
-		45A1E4AF1BC9B067008D3637 /* jquery.js in Resources */ = {isa = PBXBuildFile; fileRef = 45A1E4A91BC9B067008D3637 /* jquery.js */; settings = {ASSET_TAGS = (); }; };
-		45A1E4B01BC9B067008D3637 /* modernizr.js in Resources */ = {isa = PBXBuildFile; fileRef = 45A1E4AA1BC9B067008D3637 /* modernizr.js */; settings = {ASSET_TAGS = (); }; };
-		45A1E4B11BC9B067008D3637 /* normalize.css in Resources */ = {isa = PBXBuildFile; fileRef = 45A1E4AB1BC9B067008D3637 /* normalize.css */; settings = {ASSET_TAGS = (); }; };
+		45A1E4B51BCACE1A008D3637 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45A1E4B41BCACE1A008D3637 /* StoreKit.framework */; };
+		45A1E4B71BCACE21008D3637 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45A1E4B61BCACE21008D3637 /* Foundation.framework */; };
+		45A1E4B91BCACE29008D3637 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45A1E4B81BCACE29008D3637 /* CoreGraphics.framework */; };
+		45A1E4BB1BCACE2D008D3637 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45A1E4BA1BCACE2D008D3637 /* UIKit.framework */; };
+		45A1E4BE1BCACE9C008D3637 /* SKYConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 45A1E4BD1BCACE9C008D3637 /* SKYConstants.m */; settings = {ASSET_TAGS = (); }; };
 		45A66A2D1BC53E1B00E0D5FA /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45A66A2C1BC53E1B00E0D5FA /* images.xcassets */; settings = {ASSET_TAGS = (); }; };
 		45A66A301BC549E600E0D5FA /* ostrich-sans-inline-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 45A66A2E1BC549E600E0D5FA /* ostrich-sans-inline-regular.ttf */; settings = {ASSET_TAGS = (); }; };
 		45A66A311BC549E600E0D5FA /* PlantagenetCherokee.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 45A66A2F1BC549E600E0D5FA /* PlantagenetCherokee.ttf */; settings = {ASSET_TAGS = (); }; };
@@ -33,6 +33,9 @@
 /* Begin PBXFileReference section */
 		00BC2858F2260B3F72F372C5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		03186230C41E9C47BC3C0286 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4530C5AA1BCB251800C0BBF8 /* Chartboost.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Chartboost.framework; path = "Good News/Chartboost.framework"; sourceTree = "<group>"; };
+		4530C5AD1BCC34A000C0BBF8 /* SKYRemoveAdsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKYRemoveAdsViewController.h; sourceTree = "<group>"; };
+		4530C5AE1BCC34A000C0BBF8 /* SKYRemoveAdsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKYRemoveAdsViewController.m; sourceTree = "<group>"; };
 		454C51A71B5C126F00D6680A /* Good News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Good News.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		454C51AB1B5C126F00D6680A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		454C51AC1B5C126F00D6680A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -43,13 +46,12 @@
 		454C51C61B5C126F00D6680A /* Good_NewsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Good_NewsTests.m; sourceTree = "<group>"; };
 		455FD81E1BC8AEBD000E449F /* SKYNewsFeedTableViewCell+Customization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKYNewsFeedTableViewCell+Customization.h"; sourceTree = "<group>"; };
 		455FD81F1BC8AEBD000E449F /* SKYNewsFeedTableViewCell+Customization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKYNewsFeedTableViewCell+Customization.m"; sourceTree = "<group>"; };
-		455FD8301BC8BF78000E449F /* custom.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = custom.css; sourceTree = "<group>"; };
-		45A1E4A61BC9B067008D3637 /* foundation.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = foundation.css; sourceTree = "<group>"; };
-		45A1E4A71BC9B067008D3637 /* foundation.min.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = foundation.min.css; sourceTree = "<group>"; };
-		45A1E4A81BC9B067008D3637 /* foundation.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = foundation.min.js; sourceTree = "<group>"; };
-		45A1E4A91BC9B067008D3637 /* jquery.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jquery.js; sourceTree = "<group>"; };
-		45A1E4AA1BC9B067008D3637 /* modernizr.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = modernizr.js; sourceTree = "<group>"; };
-		45A1E4AB1BC9B067008D3637 /* normalize.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = normalize.css; sourceTree = "<group>"; };
+		45A1E4B41BCACE1A008D3637 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		45A1E4B61BCACE21008D3637 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		45A1E4B81BCACE29008D3637 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		45A1E4BA1BCACE2D008D3637 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		45A1E4BC1BCACE9C008D3637 /* SKYConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKYConstants.h; sourceTree = "<group>"; };
+		45A1E4BD1BCACE9C008D3637 /* SKYConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKYConstants.m; sourceTree = "<group>"; };
 		45A66A2C1BC53E1B00E0D5FA /* images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = images.xcassets; sourceTree = "<group>"; };
 		45A66A2E1BC549E600E0D5FA /* ostrich-sans-inline-regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ostrich-sans-inline-regular.ttf"; sourceTree = "<group>"; };
 		45A66A2F1BC549E600E0D5FA /* PlantagenetCherokee.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PlantagenetCherokee.ttf; sourceTree = "<group>"; };
@@ -73,6 +75,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45A1E4BB1BCACE2D008D3637 /* UIKit.framework in Frameworks */,
+				45A1E4B91BCACE29008D3637 /* CoreGraphics.framework in Frameworks */,
+				45A1E4B71BCACE21008D3637 /* Foundation.framework in Frameworks */,
+				4530C5AB1BCB251800C0BBF8 /* Chartboost.framework in Frameworks */,
+				45A1E4B51BCACE1A008D3637 /* StoreKit.framework in Frameworks */,
 				03804F1A430A7A62C5C17CC9 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -80,6 +87,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4530C5AC1BCC348900C0BBF8 /* Remove Ads */ = {
+			isa = PBXGroup;
+			children = (
+				4530C5AD1BCC34A000C0BBF8 /* SKYRemoveAdsViewController.h */,
+				4530C5AE1BCC34A000C0BBF8 /* SKYRemoveAdsViewController.m */,
+			);
+			name = "Remove Ads";
+			sourceTree = "<group>";
+		};
 		454C519E1B5C126F00D6680A = {
 			isa = PBXGroup;
 			children = (
@@ -102,7 +118,8 @@
 		454C51A91B5C126F00D6680A /* Good News */ = {
 			isa = PBXGroup;
 			children = (
-				45A66A3F1BC75C3D00E0D5FA /* Categories */,
+				4530C5AC1BCC348900C0BBF8 /* Remove Ads */,
+				45A66A3F1BC75C3D00E0D5FA /* Constants */,
 				45A66A371BC68CAD00E0D5FA /* Model */,
 				45A66A321BC68BD000E0D5FA /* Networking */,
 				45E066431BC4864B00BB9723 /* Article */,
@@ -143,20 +160,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		455FD8211BC8BB97000E449F /* Web Styles */ = {
-			isa = PBXGroup;
-			children = (
-				45A1E4A61BC9B067008D3637 /* foundation.css */,
-				45A1E4A71BC9B067008D3637 /* foundation.min.css */,
-				45A1E4A81BC9B067008D3637 /* foundation.min.js */,
-				45A1E4A91BC9B067008D3637 /* jquery.js */,
-				45A1E4AA1BC9B067008D3637 /* modernizr.js */,
-				45A1E4AB1BC9B067008D3637 /* normalize.css */,
-				455FD8301BC8BF78000E449F /* custom.css */,
-			);
-			name = "Web Styles";
-			sourceTree = "<group>";
-		};
 		45A66A321BC68BD000E0D5FA /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -194,11 +197,13 @@
 			name = Transformers;
 			sourceTree = "<group>";
 		};
-		45A66A3F1BC75C3D00E0D5FA /* Categories */ = {
+		45A66A3F1BC75C3D00E0D5FA /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				45A1E4BC1BCACE9C008D3637 /* SKYConstants.h */,
+				45A1E4BD1BCACE9C008D3637 /* SKYConstants.m */,
 			);
-			name = Categories;
+			name = Constants;
 			sourceTree = "<group>";
 		};
 		45E0663F1BC3EFFE00BB9723 /* News Feed */ = {
@@ -217,7 +222,6 @@
 		45E066431BC4864B00BB9723 /* Article */ = {
 			isa = PBXGroup;
 			children = (
-				455FD8211BC8BB97000E449F /* Web Styles */,
 				45E066441BC4866800BB9723 /* SKYArticleViewController.h */,
 				45E066451BC4866800BB9723 /* SKYArticleViewController.m */,
 			);
@@ -236,6 +240,11 @@
 		D18A660097743CAE4819A827 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4530C5AA1BCB251800C0BBF8 /* Chartboost.framework */,
+				45A1E4BA1BCACE2D008D3637 /* UIKit.framework */,
+				45A1E4B81BCACE29008D3637 /* CoreGraphics.framework */,
+				45A1E4B61BCACE21008D3637 /* Foundation.framework */,
+				45A1E4B41BCACE1A008D3637 /* StoreKit.framework */,
 				03186230C41E9C47BC3C0286 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -302,14 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				45A66A311BC549E600E0D5FA /* PlantagenetCherokee.ttf in Resources */,
-				45A1E4AD1BC9B067008D3637 /* foundation.min.css in Resources */,
 				454C51B61B5C126F00D6680A /* Main.storyboard in Resources */,
-				45A1E4B11BC9B067008D3637 /* normalize.css in Resources */,
-				45A1E4AC1BC9B067008D3637 /* foundation.css in Resources */,
-				455FD8311BC8BF78000E449F /* custom.css in Resources */,
-				45A1E4B01BC9B067008D3637 /* modernizr.js in Resources */,
-				45A1E4AE1BC9B067008D3637 /* foundation.min.js in Resources */,
-				45A1E4AF1BC9B067008D3637 /* jquery.js in Resources */,
 				45A66A2D1BC53E1B00E0D5FA /* images.xcassets in Resources */,
 				45A66A301BC549E600E0D5FA /* ostrich-sans-inline-regular.ttf in Resources */,
 			);
@@ -358,9 +360,11 @@
 				455FD8201BC8AEBD000E449F /* SKYNewsFeedTableViewCell+Customization.m in Sources */,
 				45E066421BC3F02700BB9723 /* SKYNewsFeedTableViewCell.m in Sources */,
 				45E0663E1BC3EFEB00BB9723 /* SKYNewsFeedTableViewController.m in Sources */,
+				45A1E4BE1BCACE9C008D3637 /* SKYConstants.m in Sources */,
 				45A66A3A1BC68CB800E0D5FA /* SKYArticle.m in Sources */,
 				45E066461BC4866800BB9723 /* SKYArticleViewController.m in Sources */,
 				45A66A361BC68C0600E0D5FA /* SKYNetworkHandler.m in Sources */,
+				4530C5AF1BCC34A000C0BBF8 /* SKYRemoveAdsViewController.m in Sources */,
 				454C51B01B5C126F00D6680A /* AppDelegate.m in Sources */,
 				454C51AD1B5C126F00D6680A /* main.m in Sources */,
 				45A66A3E1BC693C900E0D5FA /* SKYArticleTransformer.m in Sources */,
@@ -468,10 +472,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_MODULE_DEBUGGING = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Good",
+					News,
+				);
 				INFOPLIST_FILE = "Good News/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.skytopdesigns.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -483,10 +496,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_MODULE_DEBUGGING = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Good",
+					News,
+				);
 				INFOPLIST_FILE = "Good News/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.skytopdesigns.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

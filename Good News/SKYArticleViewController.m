@@ -8,6 +8,7 @@
 
 #import "SKYArticleViewController.h"
 #import "SKYArticle.h"
+#import <Chartboost/Chartboost.h>
 
 @interface SKYArticleViewController ()
 
@@ -24,6 +25,11 @@
     [self setUpUI];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+}
+
 - (void)setUpUI {
     [self.navigationController setNavigationBarHidden:YES animated:YES];
     self.shareButton.layer.cornerRadius = 8.0;
@@ -33,6 +39,9 @@
 }
 
 - (void)prepareWebView {
+    
+    [Chartboost showInterstitial:CBLocationHomeScreen];
+    
     if (!self.article.isUrlEscaped) {
         self.article.urlStringEscaped = [self.article.urlString stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLHostAllowedCharacterSet]];
         self.article.isUrlEscaped = YES;

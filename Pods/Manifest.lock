@@ -20,7 +20,7 @@ PODS:
   - AFNetworking/UIKit (2.6.0):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
-  - HTMLReader (0.8)
+  - HTMLReader (0.9)
   - Ono (1.2.2)
   - SDWebImage (3.7.3):
     - SDWebImage/Core (= 3.7.3)
@@ -36,7 +36,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 79f7eb1a0fcfa7beb409332b2ca49afe9ce53b05
-  HTMLReader: b4d19899a242c02e1ce4a2308584fe2a6bcb6f6b
+  HTMLReader: d93d3db9fe26c28c2479bcc906d3e7453377a902
   Ono: 80b1c686777d3f6d5d5ce6fcac8a74afef4ca197
   SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
   UIScrollView-InfiniteScroll: b6c7d6d155dca7f9c5dd43813ecffeb301b3d50c
