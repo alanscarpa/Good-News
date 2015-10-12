@@ -67,8 +67,10 @@
                 htmlContent = jsonArray[@"media"][@"html"];
             }
             
+            NSLog(@"%@", jsonArray);
             
-            NSMutableString *html = [NSMutableString stringWithFormat:@"<html><style>body{background:#fff;color:#222;cursor:auto;font-family:\"IowanOldStyle\";fontstyle:normal;font-weight:normal;line-height:1.5;margin:0;padding:10px;position:relative;}img{max-width:92%%;margin:0auto;display:table;}iframe{max-width:98%%;}h3{font-family: \"Iowan Old Style\";}</style><h3>%@</h3>%@" , title, htmlContent];
+            
+            NSMutableString *html = [NSMutableString stringWithFormat:@"<html><style>body{background:#fff;color:#222;cursor:auto;font-family:\"IowanOldStyle\";fontstyle:normal;font-weight:normal;line-height:1.5;margin:0;padding:10px;position:relative;}img{max-width:92%%;margin:0auto;display:table;}iframe{max-width:98%%;}h3{font-family: \"Iowan Old Style\";}</style><h3>%@</h3>%@<br><i>Source: <a href=\"%@\">%@</a>" , title, htmlContent, self.article.urlString, self.article.urlString];
 
             [self.webView loadHTMLString:html baseURL:[NSURL URLWithString:@"http://blabhlah.com"]];
             
