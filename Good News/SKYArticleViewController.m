@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (weak, nonatomic) IBOutlet UIButton *shareButton;
 @property (weak, nonatomic) IBOutlet UIButton *backButton;
+@property (nonatomic) BOOL areAdsRemoved;
 
 @end
 
@@ -22,7 +23,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self checkIfAdsAreRemoved];
     [self setUpUI];
+}
+
+- (void)checkIfAdsAreRemoved {
+    self.areAdsRemoved = [[NSUserDefaults standardUserDefaults] boolForKey:@"areAdsRemoved"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -40,7 +47,9 @@
 
 - (void)prepareWebView {
     
-    [Chartboost showInterstitial:CBLocationHomeScreen];
+    if (!self.areAdsRemoved){
+        [Chartboost showInterstitial:CBLocationHomeScreen];
+    }
     
     if (!self.article.isUrlEscaped) {
         self.article.urlStringEscaped = [self.article.urlString stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLHostAllowedCharacterSet]];

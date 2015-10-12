@@ -13,6 +13,7 @@
             <string>OstrichSansInline</string>
             <string>OstrichSansInline</string>
             <string>OstrichSansInline</string>
+            <string>OstrichSansInline</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -199,18 +200,35 @@
                                 <rect key="frame" x="75" y="242" width="450" height="32"/>
                                 <color key="backgroundColor" red="1" green="0.76470588240000004" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="OstrichSansInline" family="Ostrich Sans Inline" pointSize="27"/>
-                                <state key="normal" title="CLICK HERE TO BUY NOW">
+                                <state key="normal" title="CLICK HERE TO UPGRADE">
                                     <color key="titleColor" red="0.054901960780000002" green="0.054901960780000002" blue="0.054901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="upgradeButtonTapped:" destination="gUj-2k-avn" eventType="touchUpInside" id="Y0S-lb-ozQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xim-cn-hnw">
+                                <rect key="frame" x="150" y="478" width="300" height="22"/>
+                                <color key="backgroundColor" red="1" green="0.76470588240000004" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="OstrichSansInline" family="Ostrich Sans Inline" pointSize="14"/>
+                                <state key="normal" title="RESTORE PURCHASES">
+                                    <color key="titleColor" red="0.054901960780000002" green="0.054901960780000002" blue="0.054901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="restorePurchasesButtonTapped:" destination="gUj-2k-avn" eventType="touchUpInside" id="FzA-fu-Evc"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.90588235289999997" blue="0.72941176470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="WAF-5D-DUE" firstAttribute="top" secondItem="Xim-cn-hnw" secondAttribute="bottom" constant="100" id="7Zp-PA-w2U"/>
                             <constraint firstItem="4RY-3z-0TD" firstAttribute="width" secondItem="krL-QK-Cjd" secondAttribute="width" multiplier="0.75" id="JdW-gH-u3P"/>
+                            <constraint firstItem="Xim-cn-hnw" firstAttribute="width" secondItem="krL-QK-Cjd" secondAttribute="width" multiplier="0.5" id="NwP-vC-0Bk"/>
                             <constraint firstItem="OCI-VI-6MZ" firstAttribute="centerX" secondItem="krL-QK-Cjd" secondAttribute="centerX" id="Snw-xr-cZQ"/>
                             <constraint firstItem="hw5-x6-MLo" firstAttribute="centerX" secondItem="krL-QK-Cjd" secondAttribute="centerX" id="TUB-Tg-Ew6"/>
                             <constraint firstItem="WAF-5D-DUE" firstAttribute="top" secondItem="OCI-VI-6MZ" secondAttribute="bottom" constant="450" id="UeY-um-E4O"/>
                             <constraint firstItem="4RY-3z-0TD" firstAttribute="centerX" secondItem="krL-QK-Cjd" secondAttribute="centerX" id="VZd-z6-WbU"/>
+                            <constraint firstItem="Xim-cn-hnw" firstAttribute="centerX" secondItem="krL-QK-Cjd" secondAttribute="centerX" id="ZFC-cP-klg"/>
                             <constraint firstItem="OCI-VI-6MZ" firstAttribute="top" secondItem="Fyt-zC-Lgj" secondAttribute="bottom" constant="65" id="esc-1u-siu"/>
                             <constraint firstItem="4RY-3z-0TD" firstAttribute="top" secondItem="hw5-x6-MLo" secondAttribute="bottom" constant="50" id="pgl-aS-918"/>
                             <constraint firstItem="hw5-x6-MLo" firstAttribute="top" secondItem="OCI-VI-6MZ" secondAttribute="bottom" constant="16" id="xvR-ki-49g"/>
