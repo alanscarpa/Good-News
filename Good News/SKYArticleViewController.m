@@ -9,13 +9,15 @@
 #import "SKYArticleViewController.h"
 #import "SKYArticle.h"
 #import <Chartboost/Chartboost.h>
+#import <SVProgressHUD/SVProgressHUD.h>
 
-@interface SKYArticleViewController ()
+@interface SKYArticleViewController () <UIWebViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (weak, nonatomic) IBOutlet UIButton *shareButton;
 @property (weak, nonatomic) IBOutlet UIButton *backButton;
 @property (nonatomic) BOOL areAdsRemoved;
+@property (weak, nonatomic) IBOutlet UIButton *noAdsButton;
 
 @end
 
@@ -23,18 +25,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self checkIfAdsAreRemoved];
     [self setUpUI];
-}
-
-- (void)checkIfAdsAreRemoved {
-    self.areAdsRemoved = [[NSUserDefaults standardUserDefaults] boolForKey:@"areAdsRemoved"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
+    [self prepareWebView];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES animated:YES];
+    [self checkIfAdsAreRemoved];
+}
+
+- (void)checkIfAdsAreRemoved {
+    self.areAdsRemoved = [[NSUserDefaults standardUserDefaults] boolForKey:@"areAdsRemoved"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    if (!self.areAdsRemoved){
+        [Chartboost showInterstitial:CBLocationHomeScreen];
+    } else {
+        self.noAdsButton.hidden = YES;
+    }
 }
 
 - (void)setUpUI {
@@ -42,15 +50,12 @@
     self.shareButton.layer.cornerRadius = 8.0;
     self.shareButton.titleLabel.adjustsFontSizeToFitWidth = YES;
     self.shareButton.titleLabel.minimumScaleFactor = 0.5;
-    [self prepareWebView];
 }
 
 - (void)prepareWebView {
-    
-    if (!self.areAdsRemoved){
-        [Chartboost showInterstitial:CBLocationHomeScreen];
-    }
-    
+    [SVProgressHUD show];
+
+    self.webView.delegate = self;
     if (!self.article.isUrlEscaped) {
         self.article.urlStringEscaped = [self.article.urlString stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLHostAllowedCharacterSet]];
         self.article.isUrlEscaped = YES;
@@ -76,13 +81,13 @@
                 htmlContent = jsonArray[@"media"][@"html"];
             }
             
-            NSLog(@"%@", jsonArray);
-            
-            
-            NSMutableString *html = [NSMutableString stringWithFormat:@"<html><style>body{background:#fff;color:#222;cursor:auto;font-family:\"IowanOldStyle\";fontstyle:normal;font-weight:normal;line-height:1.5;margin:0;padding:10px;position:relative;}img{max-width:92%%;margin:0auto;display:table;}iframe{max-width:98%%;}h3{font-family: \"Iowan Old Style\";}</style><h3>%@</h3>%@<br><i>Source: <a href=\"%@\">%@</a>" , title, htmlContent, self.article.urlString, self.article.urlString];
+            NSMutableString *html = [NSMutableString stringWithFormat:@"<html><style>body{background:#fff;color:#222;cursor:auto;font-family:\"IowanOldStyle\";fontstyle:normal;font-weight:normal;line-height:1.5;margin:0;padding:10px;position:relative;font-size:20px;}img{max-width:92%%;margin:0 auto;display:table;}iframe{max-width:98%%;}h3{font-family: \"Iowan Old Style\";}</style><h3>%@</h3>%@<br><i>Source: <a href=\"%@\">%@</a>" , title, htmlContent, self.article.urlString, self.article.urlString];
 
-            [self.webView loadHTMLString:html baseURL:[NSURL URLWithString:@"http://blabhlah.com"]];
+            [self.webView loadHTMLString:html baseURL:[NSURL URLWithString:@"http://skytopdesigns.com"]];
             
+            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                [SVProgressHUD dismiss];
+            }];
         } else {
             NSLog(@"Error calling Embedly");
             NSLog(@"%@", response);
@@ -101,6 +106,10 @@
     UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
     activityVC.excludedActivityTypes = @[UIActivityTypeAssignToContact, UIActivityTypePrint];
     [self presentViewController:activityVC animated:YES completion:nil];
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+    [webView.scrollView setContentSize: CGSizeMake(webView.frame.size.width, webView.scrollView.contentSize.height)];
 }
 
 @end

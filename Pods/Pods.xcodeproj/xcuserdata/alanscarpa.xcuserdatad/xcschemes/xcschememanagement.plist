@@ -29,6 +29,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SVProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>UIScrollView-InfiniteScroll.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,7 +47,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>37F6733EE7F9D11ECC3D314C69083ACE</key>
+		<key>420F2E2A49BFD798D5E816FA1E3EF2ED</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4B6EB942B4DB34D44DB6F778445B0C30</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -52,17 +62,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>573DC33F840B326BE61027C06C91D96A</key>
+		<key>B281DA29A9C3EDFB45BA53651F6BA611</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A0816457E78DC1BC20DF0C1B15E7E45D</key>
+		<key>D0C67CC9EA37F208CE5539EF90400707</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A27B397E68CE1CE46DA52F11D5E5F84F</key>
+		<key>EDC8D235F5BFEE30ADC1D8E2054FEE4B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

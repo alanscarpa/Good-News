@@ -14,6 +14,7 @@
             <string>OstrichSansInline</string>
             <string>OstrichSansInline</string>
             <string>OstrichSansInline</string>
+            <string>OstrichSansInline</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -34,16 +35,16 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sunrise" translatesAutoresizingMaskIntoConstraints="NO" id="3ee-8S-6ZP">
-                                            <rect key="frame" x="8" y="36" width="71.5" height="71.5"/>
+                                            <rect key="frame" x="8" y="-3" width="150" height="150"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="3ee-8S-6ZP" secondAttribute="height" multiplier="1:1" id="jiE-EU-IR1"/>
                                             </constraints>
                                         </imageView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wV0-mV-A6U">
-                                            <rect key="frame" x="95" y="54.5" width="488.5" height="34"/>
+                                            <rect key="frame" x="166" y="55" width="410" height="34"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Corgi Saves Baby From Drowning" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l2V-QA-ODq">
-                                                    <rect key="frame" x="9" y="8" width="471.5" height="18"/>
+                                                    <rect key="frame" x="8" y="8" width="394" height="18"/>
                                                     <fontDescription key="fontDescription" name="IowanOldStyle-Bold" family="Iowan Old Style" pointSize="13"/>
                                                     <color key="textColor" red="0.054901960784313725" green="0.054901960784313725" blue="0.054901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -57,15 +58,35 @@
                                                 <constraint firstItem="l2V-QA-ODq" firstAttribute="top" secondItem="wV0-mV-A6U" secondAttribute="top" constant="8" id="umd-TA-xur"/>
                                             </constraints>
                                         </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2h9-kL-uUx">
+                                            <rect key="frame" x="585.5" y="63" width="6.5" height="17"/>
+                                            <fontDescription key="fontDescription" name="OstrichSansInline" family="Ostrich Sans Inline" pointSize="24"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="3ee-8S-6ZP" firstAttribute="centerY" secondItem="Sdz-1M-fD0" secondAttribute="centerY" id="2h2-yf-4BF"/>
-                                        <constraint firstItem="wV0-mV-A6U" firstAttribute="centerY" secondItem="3ee-8S-6ZP" secondAttribute="centerY" id="TgU-1J-KX0"/>
-                                        <constraint firstItem="wV0-mV-A6U" firstAttribute="leading" secondItem="3ee-8S-6ZP" secondAttribute="trailing" constant="16" id="X56-dX-LsF"/>
-                                        <constraint firstItem="3ee-8S-6ZP" firstAttribute="leading" secondItem="Sdz-1M-fD0" secondAttribute="leadingMargin" id="cz2-WW-hXL"/>
-                                        <constraint firstAttribute="trailing" secondItem="wV0-mV-A6U" secondAttribute="trailing" constant="16" id="faO-bY-bFU"/>
-                                        <constraint firstItem="3ee-8S-6ZP" firstAttribute="height" secondItem="Sdz-1M-fD0" secondAttribute="height" multiplier="0.5" id="vKX-xB-s7N"/>
+                                        <constraint firstItem="3ee-8S-6ZP" firstAttribute="width" secondItem="Sdz-1M-fD0" secondAttribute="width" multiplier="0.25" id="3oG-aP-6sN"/>
+                                        <constraint firstAttribute="leadingMargin" secondItem="3ee-8S-6ZP" secondAttribute="leading" id="5Hl-kb-zYY"/>
+                                        <constraint firstItem="wV0-mV-A6U" firstAttribute="centerY" secondItem="3ee-8S-6ZP" secondAttribute="centerY" id="9mp-pQ-aHl"/>
+                                        <constraint firstItem="2h9-kL-uUx" firstAttribute="leading" secondItem="wV0-mV-A6U" secondAttribute="trailing" constant="261.5" id="AbN-hT-Od3"/>
+                                        <constraint firstItem="3ee-8S-6ZP" firstAttribute="centerY" secondItem="Sdz-1M-fD0" secondAttribute="centerY" id="CSV-bq-aee"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="wV0-mV-A6U" secondAttribute="trailing" constant="16" id="I9H-XE-Rsd"/>
+                                        <constraint firstItem="wV0-mV-A6U" firstAttribute="leading" secondItem="3ee-8S-6ZP" secondAttribute="trailing" constant="8" id="IgT-uR-X9L"/>
+                                        <constraint firstItem="2h9-kL-uUx" firstAttribute="centerY" secondItem="3ee-8S-6ZP" secondAttribute="centerY" id="IlI-pr-stB"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="2h9-kL-uUx" secondAttribute="trailing" id="RNC-Vr-Xba"/>
+                                        <constraint firstItem="2h9-kL-uUx" firstAttribute="centerY" secondItem="wV0-mV-A6U" secondAttribute="centerY" id="TeW-eT-NH8"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="2h9-kL-uUx" secondAttribute="trailing" id="eXU-gs-CZF"/>
+                                        <constraint firstItem="2h9-kL-uUx" firstAttribute="leading" secondItem="wV0-mV-A6U" secondAttribute="trailing" id="k0c-Tg-FHg"/>
                                     </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="AbN-hT-Od3"/>
+                                            <exclude reference="TeW-eT-NH8"/>
+                                            <exclude reference="eXU-gs-CZF"/>
+                                            <exclude reference="k0c-Tg-FHg"/>
+                                        </mask>
+                                    </variation>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="articleImageView" destination="3ee-8S-6ZP" id="ESj-dI-bq9"/>
@@ -164,6 +185,7 @@
                     </view>
                     <connections>
                         <outlet property="backButton" destination="h02-eP-I76" id="lJF-ha-3om"/>
+                        <outlet property="noAdsButton" destination="sgF-Of-xB7" id="MRK-KL-GTq"/>
                         <outlet property="shareButton" destination="Msm-YR-8WX" id="GVa-IE-Ceg"/>
                         <outlet property="webView" destination="sT9-2Q-de0" id="awk-vJ-W3U"/>
                     </connections>

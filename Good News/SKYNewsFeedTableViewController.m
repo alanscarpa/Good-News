@@ -12,6 +12,7 @@
 #import "SKYNewsFeedTableViewCell+Customization.h"
 #import "SKYArticleViewController.h"
 #import <UIScrollView+InfiniteScroll.h>
+#import <SVProgressHUD/SVProgressHUD.h>
 
 NSString *const kArticleSourceUrlString = @"https://www.reddit.com/r/UpliftingNews";
 
@@ -27,6 +28,7 @@ NSString *const kArticleSourceUrlString = @"https://www.reddit.com/r/UpliftingNe
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [SVProgressHUD show];
     [self prepareDataSource];
     [self loadNewestArticles];
     [self setUpInfiniteScroller];
@@ -44,6 +46,7 @@ NSString *const kArticleSourceUrlString = @"https://www.reddit.com/r/UpliftingNe
         if (!error){
             [self updateDataSourceWithArticles:articles
                       andBackAndNextURLStrings:backAndNextButtonURLStrings];
+            [SVProgressHUD dismiss];
             [self.tableView reloadData];
             [self.pullDownRefreshControl endRefreshing];
         } else {
