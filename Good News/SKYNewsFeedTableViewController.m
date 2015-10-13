@@ -51,6 +51,7 @@ NSString *const kArticleSourceUrlString = @"https://www.reddit.com/r/UpliftingNe
             [self.pullDownRefreshControl endRefreshing];
         } else {
             NSLog(@"Error getting latest articlets: %@", error);
+            [SVProgressHUD dismiss];
         }
     }];
 }

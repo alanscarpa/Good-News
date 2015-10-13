@@ -77,12 +77,25 @@
             
             NSString *title = [NSString stringWithFormat:@"%@", jsonArray[@"title"]];
             NSString *htmlContent = jsonArray[@"content"];
+            NSArray *imagesDictionary = [[NSArray alloc] init];
+            NSMutableArray *imagesHTMLString = [[NSMutableArray alloc] init];
+           // NSMutableString *imagesHTMLString = [[NSMutableString alloc] init];
             if (jsonArray[@"content"] == [NSNull null]) {
                 htmlContent = jsonArray[@"media"][@"html"];
             }
+            if (jsonArray[@"content"] == [NSNull null] && [jsonArray[@"media"] count] == 0) {
+                imagesDictionary = jsonArray[@"images"];
+                if (imagesDictionary.count > 0) {
+                    for (NSDictionary *dictionary in imagesDictionary) {
+                        NSString *imageHTMLString = [NSString stringWithFormat:@"<br><br><img src=\"%@\">", dictionary[@"url"]];
+                        [imagesHTMLString addObject:imageHTMLString];
+                    }
+                    htmlContent = [imagesHTMLString componentsJoinedByString:@""];
+                }
+            }
             
             NSMutableString *html = [NSMutableString stringWithFormat:@"<html><style>body{background:#fff;color:#222;cursor:auto;font-family:\"IowanOldStyle\";fontstyle:normal;font-weight:normal;line-height:1.5;margin:0;padding:10px;position:relative;font-size:20px;}img{max-width:92%%;margin:0 auto;display:table;}iframe{max-width:98%%;}h3{font-family: \"Iowan Old Style\";}</style><h3>%@</h3>%@<br><i>Source: <a href=\"%@\">%@</a>" , title, htmlContent, self.article.urlString, self.article.urlString];
-
+            
             [self.webView loadHTMLString:html baseURL:[NSURL URLWithString:@"http://skytopdesigns.com"]];
             
             [[NSOperationQueue mainQueue] addOperationWithBlock:^{
@@ -90,6 +103,7 @@
             }];
         } else {
             NSLog(@"Error calling Embedly");
+            [SVProgressHUD dismiss];
             NSLog(@"%@", response);
             NSLog(@"%@", connectionError);
         }
@@ -97,11 +111,12 @@
 }
 
 - (IBAction)backButtonTapped:(id)sender {
+    [SVProgressHUD dismiss];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (IBAction)shareButtonTapped:(id)sender {
-    NSString *texttoshare = [NSString stringWithFormat:@"Here's some good news for a change: %@  via @goodnewsapp", self.article.urlString];
+    NSString *texttoshare = [NSString stringWithFormat:@"Here's some good news for a change: %@  via @goodnewsapp http://bit.ly/goodnewsapp", self.article.urlString];
     NSArray *activityItems = @[texttoshare];
     UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
     activityVC.excludedActivityTypes = @[UIActivityTypeAssignToContact, UIActivityTypePrint];
