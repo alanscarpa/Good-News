@@ -13,7 +13,7 @@
 		454C51B01B5C126F00D6680A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 454C51AF1B5C126F00D6680A /* AppDelegate.m */; };
 		454C51B61B5C126F00D6680A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 454C51B41B5C126F00D6680A /* Main.storyboard */; };
 		455FD8201BC8AEBD000E449F /* SKYNewsFeedTableViewCell+Customization.m in Sources */ = {isa = PBXBuildFile; fileRef = 455FD81F1BC8AEBD000E449F /* SKYNewsFeedTableViewCell+Customization.m */; settings = {ASSET_TAGS = (); }; };
-		45931AB61BCC72030033E84E /* Chartboost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45931AB51BCC72030033E84E /* Chartboost.framework */; settings = {ASSET_TAGS = (); }; };
+		45931AC01BCD1EC90033E84E /* Chartboost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45931ABF1BCD1EC90033E84E /* Chartboost.framework */; settings = {ASSET_TAGS = (); }; };
 		45A1E4B51BCACE1A008D3637 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45A1E4B41BCACE1A008D3637 /* StoreKit.framework */; };
 		45A1E4B71BCACE21008D3637 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45A1E4B61BCACE21008D3637 /* Foundation.framework */; };
 		45A1E4B91BCACE29008D3637 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45A1E4B81BCACE29008D3637 /* CoreGraphics.framework */; };
@@ -45,7 +45,7 @@
 		454C51C61B5C126F00D6680A /* Good_NewsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Good_NewsTests.m; sourceTree = "<group>"; };
 		455FD81E1BC8AEBD000E449F /* SKYNewsFeedTableViewCell+Customization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKYNewsFeedTableViewCell+Customization.h"; sourceTree = "<group>"; };
 		455FD81F1BC8AEBD000E449F /* SKYNewsFeedTableViewCell+Customization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKYNewsFeedTableViewCell+Customization.m"; sourceTree = "<group>"; };
-		45931AB51BCC72030033E84E /* Chartboost.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Chartboost.framework; path = "Good News/Chartboost.framework"; sourceTree = "<group>"; };
+		45931ABF1BCD1EC90033E84E /* Chartboost.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Chartboost.framework; path = "Good News/Chartboost.framework"; sourceTree = "<group>"; };
 		45A1E4B41BCACE1A008D3637 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		45A1E4B61BCACE21008D3637 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		45A1E4B81BCACE29008D3637 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -78,7 +78,7 @@
 				45A1E4BB1BCACE2D008D3637 /* UIKit.framework in Frameworks */,
 				45A1E4B91BCACE29008D3637 /* CoreGraphics.framework in Frameworks */,
 				45A1E4B71BCACE21008D3637 /* Foundation.framework in Frameworks */,
-				45931AB61BCC72030033E84E /* Chartboost.framework in Frameworks */,
+				45931AC01BCD1EC90033E84E /* Chartboost.framework in Frameworks */,
 				45A1E4B51BCACE1A008D3637 /* StoreKit.framework in Frameworks */,
 				03804F1A430A7A62C5C17CC9 /* libPods.a in Frameworks */,
 			);
@@ -240,7 +240,7 @@
 		D18A660097743CAE4819A827 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				45931AB51BCC72030033E84E /* Chartboost.framework */,
+				45931ABF1BCD1EC90033E84E /* Chartboost.framework */,
 				45A1E4BA1BCACE2D008D3637 /* UIKit.framework */,
 				45A1E4B81BCACE29008D3637 /* CoreGraphics.framework */,
 				45A1E4B61BCACE21008D3637 /* Foundation.framework */,
@@ -476,10 +476,9 @@
 				CLANG_ENABLE_MODULE_DEBUGGING = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Good",
-					News,
 					"$(PROJECT_DIR)/Good",
 					News,
 					"$(PROJECT_DIR)/Good",
@@ -503,10 +502,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_MODULE_DEBUGGING = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Good",
-					News,
 					"$(PROJECT_DIR)/Good",
 					News,
 					"$(PROJECT_DIR)/Good",

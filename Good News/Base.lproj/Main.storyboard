@@ -222,7 +222,7 @@
                                 <rect key="frame" x="75" y="242" width="450" height="32"/>
                                 <color key="backgroundColor" red="1" green="0.76470588240000004" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="OstrichSansInline" family="Ostrich Sans Inline" pointSize="27"/>
-                                <state key="normal" title="CLICK HERE TO UPGRADE">
+                                <state key="normal" title="CLICK HERE TO REMOVE ADS">
                                     <color key="titleColor" red="0.054901960780000002" green="0.054901960780000002" blue="0.054901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -230,9 +230,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xim-cn-hnw">
-                                <rect key="frame" x="150" y="478" width="300" height="22"/>
+                                <rect key="frame" x="150" y="475" width="300" height="25"/>
                                 <color key="backgroundColor" red="1" green="0.76470588240000004" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="OstrichSansInline" family="Ostrich Sans Inline" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="OstrichSansInline" family="Ostrich Sans Inline" pointSize="18"/>
                                 <state key="normal" title="RESTORE PURCHASES">
                                     <color key="titleColor" red="0.054901960780000002" green="0.054901960780000002" blue="0.054901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>

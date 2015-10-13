@@ -79,7 +79,7 @@
             NSString *htmlContent = jsonArray[@"content"];
             NSArray *imagesDictionary = [[NSArray alloc] init];
             NSMutableArray *imagesHTMLString = [[NSMutableArray alloc] init];
-           // NSMutableString *imagesHTMLString = [[NSMutableString alloc] init];
+
             if (jsonArray[@"content"] == [NSNull null]) {
                 htmlContent = jsonArray[@"media"][@"html"];
             }
