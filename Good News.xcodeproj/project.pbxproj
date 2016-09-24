@@ -8,26 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		03804F1A430A7A62C5C17CC9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03186230C41E9C47BC3C0286 /* libPods.a */; };
-		4530C5AF1BCC34A000C0BBF8 /* SKYRemoveAdsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4530C5AE1BCC34A000C0BBF8 /* SKYRemoveAdsViewController.m */; settings = {ASSET_TAGS = (); }; };
+		4530C5AF1BCC34A000C0BBF8 /* SKYRemoveAdsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4530C5AE1BCC34A000C0BBF8 /* SKYRemoveAdsViewController.m */; };
 		454C51AD1B5C126F00D6680A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 454C51AC1B5C126F00D6680A /* main.m */; };
 		454C51B01B5C126F00D6680A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 454C51AF1B5C126F00D6680A /* AppDelegate.m */; };
 		454C51B61B5C126F00D6680A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 454C51B41B5C126F00D6680A /* Main.storyboard */; };
-		455FD8201BC8AEBD000E449F /* SKYNewsFeedTableViewCell+Customization.m in Sources */ = {isa = PBXBuildFile; fileRef = 455FD81F1BC8AEBD000E449F /* SKYNewsFeedTableViewCell+Customization.m */; settings = {ASSET_TAGS = (); }; };
-		45931AC01BCD1EC90033E84E /* Chartboost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45931ABF1BCD1EC90033E84E /* Chartboost.framework */; settings = {ASSET_TAGS = (); }; };
+		455FD8201BC8AEBD000E449F /* SKYNewsFeedTableViewCell+Customization.m in Sources */ = {isa = PBXBuildFile; fileRef = 455FD81F1BC8AEBD000E449F /* SKYNewsFeedTableViewCell+Customization.m */; };
 		45A1E4B51BCACE1A008D3637 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45A1E4B41BCACE1A008D3637 /* StoreKit.framework */; };
 		45A1E4B71BCACE21008D3637 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45A1E4B61BCACE21008D3637 /* Foundation.framework */; };
 		45A1E4B91BCACE29008D3637 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45A1E4B81BCACE29008D3637 /* CoreGraphics.framework */; };
 		45A1E4BB1BCACE2D008D3637 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45A1E4BA1BCACE2D008D3637 /* UIKit.framework */; };
-		45A1E4BE1BCACE9C008D3637 /* SKYConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 45A1E4BD1BCACE9C008D3637 /* SKYConstants.m */; settings = {ASSET_TAGS = (); }; };
-		45A66A2D1BC53E1B00E0D5FA /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45A66A2C1BC53E1B00E0D5FA /* images.xcassets */; settings = {ASSET_TAGS = (); }; };
-		45A66A301BC549E600E0D5FA /* ostrich-sans-inline-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 45A66A2E1BC549E600E0D5FA /* ostrich-sans-inline-regular.ttf */; settings = {ASSET_TAGS = (); }; };
-		45A66A311BC549E600E0D5FA /* PlantagenetCherokee.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 45A66A2F1BC549E600E0D5FA /* PlantagenetCherokee.ttf */; settings = {ASSET_TAGS = (); }; };
-		45A66A361BC68C0600E0D5FA /* SKYNetworkHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 45A66A351BC68C0600E0D5FA /* SKYNetworkHandler.m */; settings = {ASSET_TAGS = (); }; };
-		45A66A3A1BC68CB800E0D5FA /* SKYArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = 45A66A391BC68CB800E0D5FA /* SKYArticle.m */; settings = {ASSET_TAGS = (); }; };
-		45A66A3E1BC693C900E0D5FA /* SKYArticleTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 45A66A3D1BC693C900E0D5FA /* SKYArticleTransformer.m */; settings = {ASSET_TAGS = (); }; };
-		45E0663E1BC3EFEB00BB9723 /* SKYNewsFeedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45E0663D1BC3EFEB00BB9723 /* SKYNewsFeedTableViewController.m */; settings = {ASSET_TAGS = (); }; };
-		45E066421BC3F02700BB9723 /* SKYNewsFeedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 45E066411BC3F02700BB9723 /* SKYNewsFeedTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
-		45E066461BC4866800BB9723 /* SKYArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45E066451BC4866800BB9723 /* SKYArticleViewController.m */; settings = {ASSET_TAGS = (); }; };
+		45A1E4BE1BCACE9C008D3637 /* SKYConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 45A1E4BD1BCACE9C008D3637 /* SKYConstants.m */; };
+		45A66A2D1BC53E1B00E0D5FA /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45A66A2C1BC53E1B00E0D5FA /* images.xcassets */; };
+		45A66A301BC549E600E0D5FA /* ostrich-sans-inline-regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 45A66A2E1BC549E600E0D5FA /* ostrich-sans-inline-regular.ttf */; };
+		45A66A311BC549E600E0D5FA /* PlantagenetCherokee.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 45A66A2F1BC549E600E0D5FA /* PlantagenetCherokee.ttf */; };
+		45A66A361BC68C0600E0D5FA /* SKYNetworkHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 45A66A351BC68C0600E0D5FA /* SKYNetworkHandler.m */; };
+		45A66A3A1BC68CB800E0D5FA /* SKYArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = 45A66A391BC68CB800E0D5FA /* SKYArticle.m */; };
+		45A66A3E1BC693C900E0D5FA /* SKYArticleTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 45A66A3D1BC693C900E0D5FA /* SKYArticleTransformer.m */; };
+		45E0663E1BC3EFEB00BB9723 /* SKYNewsFeedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45E0663D1BC3EFEB00BB9723 /* SKYNewsFeedTableViewController.m */; };
+		45E066421BC3F02700BB9723 /* SKYNewsFeedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 45E066411BC3F02700BB9723 /* SKYNewsFeedTableViewCell.m */; };
+		45E066461BC4866800BB9723 /* SKYArticleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45E066451BC4866800BB9723 /* SKYArticleViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,7 +77,6 @@
 				45A1E4BB1BCACE2D008D3637 /* UIKit.framework in Frameworks */,
 				45A1E4B91BCACE29008D3637 /* CoreGraphics.framework in Frameworks */,
 				45A1E4B71BCACE21008D3637 /* Foundation.framework in Frameworks */,
-				45931AC01BCD1EC90033E84E /* Chartboost.framework in Frameworks */,
 				45A1E4B51BCACE1A008D3637 /* StoreKit.framework in Frameworks */,
 				03804F1A430A7A62C5C17CC9 /* libPods.a in Frameworks */,
 			);
@@ -278,7 +276,7 @@
 		454C519F1B5C126F00D6680A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Skytop Designs";
 				TargetAttributes = {
 					454C51A61B5C126F00D6680A = {
@@ -398,8 +396,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -442,8 +442,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -470,6 +472,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7B4F970162EA018350AFDF7E /* Pods.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
@@ -477,19 +480,14 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Good",
-					News,
-					"$(PROJECT_DIR)/Good",
-					News,
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "Good News/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.skytopdesigns.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -497,6 +495,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 00BC2858F2260B3F72F372C5 /* Pods.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
@@ -504,19 +503,14 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Good",
-					News,
-					"$(PROJECT_DIR)/Good",
-					News,
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "Good News/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.skytopdesigns.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
 		};

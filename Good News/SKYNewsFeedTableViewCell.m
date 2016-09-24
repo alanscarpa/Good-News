@@ -17,6 +17,7 @@
 @implementation SKYNewsFeedTableViewCell
 
 - (void)awakeFromNib {
+    [super awakeFromNib];
     [self setUpArticleTitleBackground];
 }
 

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+
 @class SKYArticle;
 
 @interface SKYArticleViewController : UIViewController

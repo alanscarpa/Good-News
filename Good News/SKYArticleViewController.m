@@ -8,7 +8,6 @@
 
 #import "SKYArticleViewController.h"
 #import "SKYArticle.h"
-#import <Chartboost/Chartboost.h>
 #import <SVProgressHUD/SVProgressHUD.h>
 
 @interface SKYArticleViewController () <UIWebViewDelegate>
@@ -36,13 +35,8 @@
 }
 
 - (void)checkIfAdsAreRemoved {
-    self.areAdsRemoved = [[NSUserDefaults standardUserDefaults] boolForKey:@"areAdsRemoved"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-    if (!self.areAdsRemoved){
-        [Chartboost showInterstitial:CBLocationHomeScreen];
-    } else {
-        self.noAdsButton.hidden = YES;
-    }
+    self.areAdsRemoved = YES;
+    self.noAdsButton.hidden = YES;
 }
 
 - (void)setUpUI {
