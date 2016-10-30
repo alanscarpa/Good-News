@@ -19,7 +19,7 @@ NSString *const kArticleSourceUrlString = @"https://www.reddit.com/r/UpliftingNe
 @interface SKYNewsFeedTableViewController ()
 
 @property (nonatomic, strong) NSMutableArray *articles;
-@property (nonatomic, strong) NSMutableArray *backAndNextButtonURLStrings;
+@property (nonatomic, strong) NSString *nextPageArticlesURLString;
 @property (nonatomic, strong) UIRefreshControl *pullDownRefreshControl;
 
 @end
@@ -38,14 +38,14 @@ NSString *const kArticleSourceUrlString = @"https://www.reddit.com/r/UpliftingNe
 
 - (void)prepareDataSource {
     self.articles = [[NSMutableArray alloc] init];
-    self.backAndNextButtonURLStrings = [[NSMutableArray alloc] init];
+    self.nextPageArticlesURLString = [[NSString alloc] init];
 }
 
 - (void)loadNewestArticles{
-    [SKYNetworkHandler getNewestArticlesForArticleList:self.articles FromSource:kArticleSourceUrlString withCompletionHandler:^(NSMutableArray *articles, NSMutableArray *backAndNextButtonURLStrings, NSError *error) {
+    [SKYNetworkHandler getNewestArticlesForArticleList:self.articles FromSource:kArticleSourceUrlString withCompletionHandler:^(NSMutableArray *articles, NSString *nextPageArticlesURLString, NSError *error) {
         if (!error){
             [self updateDataSourceWithArticles:articles
-                      andBackAndNextURLStrings:backAndNextButtonURLStrings];
+                      andNextPageArticlesURLString:nextPageArticlesURLString];
             [SVProgressHUD dismiss];
             [self.tableView reloadData];
             [self.pullDownRefreshControl endRefreshing];
@@ -57,10 +57,10 @@ NSString *const kArticleSourceUrlString = @"https://www.reddit.com/r/UpliftingNe
 }
 
 - (void)loadNextPageArticlesFromSource:(NSString *)urlString {
-    [SKYNetworkHandler getNextPageArticlesForArticleList:self.articles FromSource:urlString withCompletionHandler:^(NSMutableArray *articles, NSMutableArray *backAndNextButtonURLStrings, NSError *error) {
+    [SKYNetworkHandler getNextPageArticlesForArticleList:self.articles FromSource:urlString withCompletionHandler:^(NSMutableArray *articles, NSString *nextPageArticlesURLString, NSError *error) {
         if (!error){
             [self updateDataSourceWithArticles:articles
-                      andBackAndNextURLStrings:backAndNextButtonURLStrings];
+                      andNextPageArticlesURLString:nextPageArticlesURLString];
             [self.tableView reloadData];
         } else {
             NSLog(@"Error getting latest articlets: %@", error);
@@ -69,9 +69,9 @@ NSString *const kArticleSourceUrlString = @"https://www.reddit.com/r/UpliftingNe
 }
 
 - (void)updateDataSourceWithArticles:(NSMutableArray *)articles
-            andBackAndNextURLStrings:(NSMutableArray *)backAndNextURLStrings {
-    self.articles = articles;
-    self.backAndNextButtonURLStrings = backAndNextURLStrings;
+            andNextPageArticlesURLString:(NSString *)nextPageArticlesURLString {
+    [self.articles addObjectsFromArray:articles];
+    self.nextPageArticlesURLString = nextPageArticlesURLString;
 }
 
 - (void)setUpInfiniteScroller {
@@ -80,7 +80,7 @@ NSString *const kArticleSourceUrlString = @"https://www.reddit.com/r/UpliftingNe
     __weak typeof(self) weakSelf = self;
 
     [self.tableView addInfiniteScrollWithHandler:^(UITableView* tableView) {
-        [weakSelf loadNextPageArticlesFromSource:weakSelf.backAndNextButtonURLStrings[1]];
+        [weakSelf loadNextPageArticlesFromSource:weakSelf.nextPageArticlesURLString];
         [tableView reloadData];
         [tableView finishInfiniteScroll];
     }];

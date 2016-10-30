@@ -14,7 +14,7 @@
 
 + (void)getNextPageArticlesForArticleList:(NSMutableArray *)articles
                              FromSource:(NSString *)urlString
-                  withCompletionHandler:(void (^)(NSMutableArray *articles, NSMutableArray *backAndNextButtonURLStrings, NSError *error))completionHandler {
+                  withCompletionHandler:(void (^)(NSMutableArray *articles, NSString *nextPageArticlesURLString, NSError *error))completionHandler {
 
     NSURL *URL = [NSURL URLWithString:urlString];
     NSURLSessionTask *task = [[NSURLSession sharedSession] dataTaskWithURL:URL completionHandler:
@@ -24,7 +24,8 @@
                                           completionHandler([SKYArticleTransformer
                                                              updateArticles:articles
                                                              withArticlesFromData:data
-                                                             andResponse:response], [SKYArticleTransformer backAndNextButtonURLStringsFromData:data andResponse:response], nil);
+                                                             andResponse:response],
+                                                            [SKYArticleTransformer nextPageArticlesURLStringFromData:data andResponse:response], nil);
                                       }];
                                   } else {
                                       [[NSOperationQueue mainQueue] addOperationWithBlock:^{
@@ -38,7 +39,7 @@
 
 + (void)getNewestArticlesForArticleList:(NSMutableArray *)articles
                              FromSource:(NSString *)urlString
-                  withCompletionHandler:(void (^)(NSMutableArray *articles, NSMutableArray *backAndNextButtonURLStrings, NSError *error))completionHandler {
+                  withCompletionHandler:(void (^)(NSMutableArray *articles, NSString *nextPageArticlesURLString, NSError *error))completionHandler {
     
     NSURL *URL = [NSURL URLWithString:urlString];
     NSURLSessionTask *task = [[NSURLSession sharedSession] dataTaskWithURL:URL completionHandler:
@@ -48,7 +49,7 @@
                                           completionHandler([SKYArticleTransformer
                                                              updateArticles:articles
                                                              withArticlesFromData:data
-                                                             andResponse:response], [SKYArticleTransformer backAndNextButtonURLStringsFromData:data andResponse:response], nil);
+                                                             andResponse:response], [SKYArticleTransformer nextPageArticlesURLStringFromData:data andResponse:response], nil);
                                       }];
                                   } else {
                                       [[NSOperationQueue mainQueue] addOperationWithBlock:^{

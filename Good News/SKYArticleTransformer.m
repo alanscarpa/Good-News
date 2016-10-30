@@ -34,25 +34,21 @@
     return articles;
 }
 
-+ (NSMutableArray *)backAndNextButtonURLStringsFromData:(NSData *)data andResponse:(NSURLResponse *)response {
-    NSMutableArray *backAndNextButtonURLString = [[NSMutableArray alloc] initWithArray:@[[NSNull null], [NSNull null]]];
++ (NSString *)nextPageArticlesURLStringFromData:(NSData *)data andResponse:(NSURLResponse *)response {
+    NSString *nextPageArticlesURLString = [[NSString alloc] init];
     HTMLDocument *home = [self htmlDocumentFromData:data andResponse:response];
     HTMLElement *navBtns = [home firstNodeMatchingSelector:@".nextprev"];
     HTMLElement *navBtn = navBtns.children[1];
-    if ([navBtn.attributes[@"rel"] isEqualToString:@"nofollow prev"]){
-        NSLog(@"We have a previous button & next button");
-        HTMLElement *backBtn = navBtns.children[1];
-        [backAndNextButtonURLString replaceObjectAtIndex:0 withObject:backBtn.attributes[@"href"]];
-        
+    if ([navBtn.attributes[@"class"] isEqualToString:@"prev-button"]){
         HTMLElement *nextBtn = navBtns.children[3];
-        [backAndNextButtonURLString replaceObjectAtIndex:1 withObject:nextBtn.attributes[@"href"]];
-        
+        HTMLElement *link = nextBtn.childElementNodes[0];
+        nextPageArticlesURLString = link.attributes[@"href"];
     } else {
-        NSLog(@"We only have a next button");
         HTMLElement *nextBtn = navBtns.children[1];
-        [backAndNextButtonURLString replaceObjectAtIndex:1 withObject:nextBtn.attributes[@"href"]];
+        HTMLElement *link = nextBtn.childElementNodes[0];
+        nextPageArticlesURLString = link.attributes[@"href"];
     }
-    return backAndNextButtonURLString;
+    return nextPageArticlesURLString;
 }
 
 + (HTMLDocument *)htmlDocumentFromData:(NSData *)data andResponse:(NSURLResponse *)response {

@@ -12,10 +12,10 @@
 
 + (void)getNewestArticlesForArticleList:(NSMutableArray *)articles
                              FromSource:(NSString *)urlString
-                  withCompletionHandler:(void (^)(NSMutableArray *articles, NSMutableArray *backAndNextButtonURLStrings, NSError *error))completionHandler;
+                  withCompletionHandler:(void (^)(NSMutableArray *articles, NSString *nextPageArticlesURLString, NSError *error))completionHandler;
 
 + (void)getNextPageArticlesForArticleList:(NSMutableArray *)articles
                                FromSource:(NSString *)urlString
-                    withCompletionHandler:(void (^)(NSMutableArray *articles, NSMutableArray *backAndNextButtonURLStrings, NSError *error))completionHandler;
+                    withCompletionHandler:(void (^)(NSMutableArray *articles, NSString *nextPageArticlesURLString, NSError *error))completionHandler;
 
 @end
